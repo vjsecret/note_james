@@ -1,0 +1,85 @@
+JAVA教學: http://pclevin.blogspot.com/p/java_28.html, https://noob.tw/java/
+Java：詳解內部類: https://www.itread01.com/content/1513774923.html
+
+https://train.csie.ntu.edu.tw/train/course.php?id=2447
+Java[1]是一種泛用型 (general-purpose)程式語言，在不同平台上安裝Java虛擬機 (Java Virtual Machine, JVM)，可執行Java編譯後的位元碼 (byte code)，使得程式設計者可以享受"Write Once, Run Anywhere"的便利性。Java完全支援物件導向設計 (object-oriented paradigm, OOP)，讓程式設計師撰寫具備擴充性的程式結構，利於開發複雜度較高的應用軟體；Java的整合開發環境方便管理大型專案，加上優秀的記憶體管理機制以及豐富的函式庫，可大幅增進程式開發效率，諸如Spring[2]與安卓 (Android)[3]。Java作為開發高度可靠和安全軟體的語言，同時支援多執行緒來處理如多媒體等計算強度高的應用程式。根據2018年TIOBE的統計，Java為程式語言排名中使用人數最多的前三名[4][5]。2015年末開始吹起一股金融科技化 (Financial Technology, FinTech)，最受歡迎的程式語言是Java[6]。本課程將完整介紹Java的語法與重要的程式設計概念，期許學員可以獨立完成Java程式撰寫；更希望透過本課程傳授的內涵，強化學員在資訊領域內的自我學習能力。
+一、基礎程式設計
+1. 概論：計算機運作簡介 (computation model)、介紹JDK與Eclipse、第一隻Java程式
+2. 資料型態、變數、運算子 (data types, variables, operators)
+3. 流程控制：條件式、迴圈 (selections and loops)
+4. 演算法分析 (analysis of algorithms and Big-O)
+5. 陣列 (arrays)
+5.1 排序演算法 (selection sort, bubble sort, insertion sort, merge sort)
+5.2 搜尋演算法 (linear search, binary search)
+5.3 資料結構簡介 (data structure tutorial: linked list)
+6. 函數與遞迴 (methods and recursion)
+
+https://github.com/JustinSDK/JavaSE6Tutorial/blob/master/docs/CH08.md
+二、物件導向設計
+1. 物件與類別 (object and class)
+2. 封裝 (encapsulation)
+3. 物件之間HAS-A的關係
+4. 物件之間IS-A的關係：繼承 (inheritance)與介面 (interface)
+5. 方法覆寫與多型 (method overriding and polymorphism)
+6. 不可變物件 (immutability)
+7. 列舉型態 (enum types)
+8. 內部類別與匿名類別 (inner class and anonymous class)
+9. 拋錯與例外處理 (exception throwing and handling)
+
+三、物件導向設計的應用
+1. 字串與正規表示法 (strings and regular expressions)
+2. 檔案輸出與輸入 (file I/O)
+3. 圖形介面設計 (gui design)
+
+本課程將延續Java基礎班的內容，可歸納為四個主題：Java8新加入的語法 (6 hours)、平行程式基礎 (6 hours)、資料結構與演算法 (15 hours)、設計模式 (3 hours)。
+
+第一個部分將介紹在基礎班未能完整交代的概念(例如泛型)與新語法(例如lambda和stream)，並且透過JVM了解Java程式的運作原理。
+
+第二部分則是介紹如何在Java的環境中實現多執行緒的程式與如何排除平行程式中會遭遇的問題。
+
+第三部分則是介紹資料結構與演算法 (data structures and algorithms, DSA)。在CS大一的課程中，DSA是除了程設以外的最重要課程之一，尤其二年級開始會面對不同的應用問題(諸如編譯器、作業系統、計算機網路、計算機結構)等課程，都需要DSA的內容為基礎，甚至在應徵工作面試時，DSA是面試的重點項目之一(想挑戰leetcode的題目嗎?)。
+
+最後是設計模式。設計模式討論架構的問題，嘗試找出具備高度彈性與低維護成本的解法用以適應未來的需求改變。
+
+
+透過基礎班與進階班的課程內容，希望對學員在CS的學習上有所幫助，尤其是理論的部分。
+// Object-Oriented Programming
+0. A quick review on OOP
+1. Java generics
+2. Object: equality, comparison, clone
+3. Java reflection and annotations with some applications (e.g. JUnit and javadoc)
+4. Java lambdas and streams
+5. Java Optional: alternative to null
+6. Java virtual machine (JVM): internals and computation model
+
+// Concurrent Programming
+0. Basic concept: Thread & Runnable
+1. Race conditions
+2. Synchronized methods/blocks
+3. Deadlock: producer-consumer problem, dining philosophers
+4. Java concurrency framework: semaphores, monitor locks, threads pools with the Executors, Futures and Callables, CompletableFutures
+(Reference: Brian Goetz, Java Concurrency in Practice, 2006)
+
+// Data Structures & Algorithms
+0. Analysis of algorithms
+1. Array list and linked list
+2. Stack and queue
+3. Priority queue (by heap with heapsort)
+4. Binary search tree and AVL tree
+5. Hashing
+6. Undirected graphs and graph traversal by depth first search (DFS) and breadth first search (BFS)
+7. Digraphs with topological sort and strongly connected components
+8. Minimal spanning tree and shortest path
+9. Tries and regular expressions
+11. Data compression
+12. Some greedy algorithms and dynamic programming
+(Reference: Robert Sedgewick and Kevin Wayne, Algorithms, 4/e, 2011)
+
+// Selected Design Patterns
+0. SOLID principle & inversion of control (IoC)
+1. Creational patterns: singleton, factory method, abstract factory, prototype, dependency injection, interning, flyweight, builder
+2. Structural patterns: adapter, decorator, facade
+3. Behavioral patterns: iterator, observer, strategy
+4. MVC model
+5. Spring framework (optional)
+(Reference: Eric Freeman,? Bert Bates,? Kathy Sierra,? Elisabeth Robson, Head First Design Patterns: A Brain-Friendly Guide(https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly/dp/0596007124), 2004; we may study the fundamentals in Spring framework from Spring Framework Documentation(https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html))

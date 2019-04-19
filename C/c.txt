@@ -1,0 +1,1349 @@
+Course 101:
+C 程式設計語言簡介
+輸入和輸出
+變數和資料型別
+常數
+操作元
+條件判斷
+迭代( iterative )程式設計
+陣列
+函數
+指標
+變數作用範圍 (scopes)
+字串
+從終端機命令列手動編譯
+演算法：
+排序演算法
+幾何圖形演算法
+數學演算法
+字串演算法
+近似值演算法
+樹演算法
+圖形演算法
+複雜理論
+問題解決方法
+更多的演算法正在不斷添加中 永遠 …
+資料結構：
+變數
+陣列( 多維 )
+字串
+Stacks
+Queues
+Linked lists (Singly & Doubly)
+Heaps
+Trees (Binary Search Tree , AVL Trees …)
+
+https://www.facebook.com/teacherchi/posts/520287568024102
+https://read01.com/zh-tw/yjm4JJ.html#.W4U-RM4zbcc C語言文件處理、C語言檔案處理
+
+https://www.sourceforge.net/
+https://sls.weco.net/node/10670 宅學習
+http://vito-note.blogspot.tw/search/label/DotNetFramework-%E6%96%87%E5%AD%97%E7%B7%A8%E7%A2%BC%E8%88%87%E6%AD%A3%E8%A6%8F%E5%8C%96
+http://vito-note.blogspot.tw/search/label/DotNetFramework-%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F%E5%AE%89%E5%85%A8%E6%80%A7
+
+http://wanggen.myweb.hinet.net/ach1/ach1.html?MywebPageId=2018271519729107771#etc_acc
+https://blog.gtwang.org/linux/linux-etc-shadow-file-format/
+
+http://twmht.github.io/blog/posts/cc/class.html 
+http://disp.ee.ntu.edu.tw/class/C++%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E5%8F%8A%E5%A2%9E%E9%80%B2%E6%95%88%E7%8E%87%E7%A8%8B%E5%BC%8F%E6%8A%80%E5%B7%A7 
+http://javapig.pixnet.net/blog/post/48216394-%E5%BB%BA%E6%A7%8B%E5%87%BD%E5%BC%8F%E5%92%8C%E8%A7%A3%E6%A7%8B%E5%87%BD%E5%BC%8F 
+http://www.cnblogs.com/oomusou/archive/2006/10/08/523274.html 
+http://www.cnblogs.com/oomusou/archive/2007/03/26/687727.html 
+*class 和 struct 的 print 大不同
+https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/class-%E5%92%8C-struct-%E7%9A%84-print-%E5%A4%A7%E4%B8%8D%E5%90%8C-6fc4ccce0157
+class 和 struct 是很像的東西，但我們也知道，它一定是有差異的，畢竟 Swift 沒有必須發明兩個一樣的東西。至於它們差別在哪，一般常聽到的是以下三點:
+
+    struct 不能繼承。
+    struct 有 memberwize initializer。
+    struct 是 value type，class 是 event type。
+
+http://darren1231.pixnet.net/blog/post/328238049-swig%E6%95%99%E5%AD%B8--c%2B%2B%E8%BD%89%E6%88%90python
+
+C程序中?符?覆?引?的重复定??? https://www.douban.com/note/317408070/
+*[C/C++] 如何避免fd 被多個子行程繼承: http://kaivy2001.pixnet.net/blog/post/32726732-%5Bc-c%2B%2B%5D-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8Dfd-%E8%A2%AB%E5%A4%9A%E5%80%8B%E5%AD%90%E8%A1%8C%E7%A8%8B%E7%B9%BC%E6%89%BF
+C回傳多值: http://www.cnblogs.com/oomusou/archive/2008/03/15/1106885.html
+http://www.blueshop.com.tw/board/FUM20041006161839LRJ/BRD200612291223048C3.html
+[純中文] C 語言入門課程影片 135 部免費看！
+
+網址： https://goo.gl/Zr5dD2
+
+
+
+
+
+https://blog.miniasp.com/post/2008/02/27/The-Software-Philosophy-from-Will.aspx#continue
+https://blog.miniasp.com/post/2007/11/27/My-working-notes-and-observation-3-years-ago.aspx
+
+http://goodspeedlee.blogspot.tw/2018/01/blog-post_7.html 
+※ https://github.com/jwasham/coding-interview-university/blob/master/translations/README-cn.md
+https://hackr.io/ google面試
+http://davytw.pixnet.net/blog/post/53349386 面試英文
+https://www.facebook.com/notes/%E9%99%B3%E9%8D%BE%E8%AA%A0/%E5%8F%B0%E7%81%A3%E5%93%AA%E5%80%8B%E7%A8%8B%E5%BC%8F%E9%A0%98%E5%9F%9F%E7%9A%84%E4%BA%BA%E6%89%8D%E5%A4%AA%E5%B0%91%E5%91%A2/10153616393181893/
+http://edisonx.pixnet.net/blog/post/55584448-c-c++-%E5%AD%B8%E7%BF%92%E6%AD%B7%E7%A8%8B%E5%88%86%E4%BA%AB
+http://cocdig.com/docs/show-post-42327.html 基礎觀念
+https://blog.miniasp.com/post/2016/12/10/Functional-Programming-in-JavaScript.aspx#continue 基礎概念
+程式設計心得分享中山資工100級劉家倫(2011/03)
+我學程式從無到有的方法：先看簡單的C語言的書，並把書本上的範例打成程式去執行。請記得一開始學程式，並不是用看的就會，要自己動動手去執行它。
+看完課本後，我會array、pointer、基本I/O的函式、一般常用數學函式、字串的函式。
+接下來學資料結構，我學會stack、queue、heap、tree、set、map、linked-list等基本的結構。
+
+基礎資料型態包括makefile
+http://blog.xuite.net/tsai.oktomy/program/65131235-const+%E6%94%BE%E7%BD%AE%E4%BD%8D%E7%BD%AE%E7%9A%84%E6%84%8F%E7%BE%A9
+https://www.cmlab.csie.ntu.edu.tw/~perng/course/chap6/chap6.html
+http://man.chinaunix.net/newsoft/grep/open.htm
+http://sp1.wikidot.com/arm
+http://web2.fg.tp.edu.tw/~cc/blog/wp-content/uploads/2010/06/20100715advanceC.pdf
+http://huenlil.pixnet.net/blog/post/26078382-%5B%E8%BD%89%5Dgnu-c-__attribute__-%E6%A9%9F%E5%88%B6%E7%B0%A1%E4%BB%8B
+
+lib:
+https://www.tutorialspoint.com/c_standard_library/stdio_h.htm
+http://tw.gitbook.net/c_standard_library/c_function_memcpy.html
+https://www.ptt.cc/man/C_and_CPP/DBF2/D139/DA10/M.1212250886.A.DF4.html lib介紹
+
+https://forum.openframeworks.cc/t/process-terminated-with-status-1073741819-0-minutes-6-seconds-with-examples/11531/20
+
+https://blog.wu-boy.com/2010/08/cc-cstring-string-h-%E5%87%BD%E5%BC%8F%EF%BC%9Astrstr-strchr/
+http://imil.au.edu.tw/~hsichcl/C_OnLine.htm 
+*==== C(system call/function pointer/call back function & snprintf()) ====*
+Question:
+C:
+http://10.1.52.201/reviews/r/3604
+Clients MAC starting with 00:xx:xx:xx:xx:xx connected to WiFi devices are failed to show up under "wirelessCMDevInfowirelessEntry". This is because strcpy from unsigned char[] variable to char [] was a failure
+Solution: Modified the code to use sprintf instead of strcpy.
+http://stackoverflow.com/questions/4337217/difference-between-signed-unsigned-char
+(
+http://stackoverflow.com/questions/21530358/how-256-stored-in-char-variable-and-unsigned-char
+http://stackoverflow.com/questions/15078638/can-i-turn-unsigned-char-into-char-and-vice-versa
+)
+
+for ( ; curVendorUiIndex < 10; curVendorUiIndex++)
+#if (defined(WIN32) && !defined(snprintf))
+#define snprintf(buf, len, fmt, ...) sprintf(buf, fmt, __VA_ARGS__)
+#endif
+
+*void cgiGetAskSideMenu(int argc, char **argv, char *var) {
+if ( argc < 2) return;
+*if (handler->output)=>判斷function point 存不存在。 if (file)
+struct mime_handler {
+    char *pattern;
+    char *mime_type;
+    char *extra_header;
+    void (*input)(char *path, FILE *stream, int len, char *boundary);
+    void (*output)(char *path, FILE *stream);
+    void (*auth)(char *userid, char *passwd, char *realm);
+};
+*for (handler = &mime_handlers[0]; handler->pattern; handler++)
+指標函數跳不開
+http://edisonx.pixnet.net/blog/post/64954439-%5Bc&++%5D-%E8%A8%98%E6%86%B6%E9%AB%94-%E5%87%BD%E5%BC%8F%E5%BC%95%E6%95%B8-%E6%A6%82%E5%BF%B5 
+*WiFi80211Settings.cpp (rbb_cm_src\bfc\networking\wifi80211): ostream & outputStream
+*__VA_ARGS__
+http://www.cnblogs.com/alexshi/archive/2012/03/09/2388453.html
+http://www.cash.idv.tw/wordpress/?p=1531
+*trio_sprintf
+*printf:va_list
+https://dotblogs.com.tw/simplecestlavie/archive/2013/01/02/86637.aspx
+https://www.ptt.cc/man/C_and_CPP/DB9B/DE78/M.1265892928.A.A3C.html
+*($(ASKEY_CUSTOMIZED),1)(=>makefile使用) 與 ASKEY_CUSTOMIZED_SUPPORT(=>cm使用)的關係
+http://10.1.52.241/swordfish/changeset/d64c1c94a94057e1ef3a29ee8e76fc92affcefdf/Jaguar
+*http://10.1.52.201/reviews/r/1819 ???=在rg/rg_apps/targets/93390MWVG/93390MWVG加CONFIG_ASK_FTR_GUI_Support=y
+
+*auto_ptr  http://openhome.cc/Gossip/CppGossip/autoPtr.html
+*複習private的使用方式 
+*friend http://pydoing.blogspot.tw/2013/01/cpp-friend-member.html
+*const member function，function (void) const:( *function最後又多了型別)
+http://hatsukiakio.blogspot.tw/2009/04/ccconst_2966.html
+http://www.cplusplus.com/forum/general/12087/
+http://blog.xuite.net/tsai.oktomy/program/65131235-const+%E6%94%BE%E7%BD%AE%E4%BD%8D%E7%BD%AE%E7%9A%84%E6%84%8F%E7%BE%A9
+http://www.cnblogs.com/oomusou/archive/2006/11/16/561860.html
+http://www.programmer-club.com.tw/ShowSameTitleN/c/38896.html
+*map<askWebpagesInterfaces, HttpCpeLoginInfo> fCpeLoginMap;
+(3) execv fscanf
+(4) std::make_pair
+*Q HttpFormHandlerAskWifiWPS.cpp:(pWifi2GHal && pWifi2GHal->ReconfigureDriver(0, kWiFiRestartAll, (char *)__FUNCTION__, (int)__LINE__, true) == false)
+*(search keyword:function() const c++)unsigned long BytesUsed (NonVolSection Section) const; inline void GetPreviousVersion (NonVolSection section, int &major, int &minor) const; http://blog.xuite.net/tsai.oktomy/program/65131235-const+%E6%94%BE%E7%BD%AE%E4%BD%8D%E7%BD%AE%E7%9A%84%E6%84%8F%E7%BE%A9
+*http://pydoing.blogspot.tw/2013/02/cpp-destructor.html
+*class的function的代數
+*======================================================================*
+*break & continue: http://www.cchsu.com/arthur/prg_bg5/c/4.8.htm
+在迴圈之中我們有時需要中斷或跳過迴圈程式的執行，這個時候就可以
+用上 break 和 continue 這兩個指令了。
+break 的意思是立即中斷最接近 break 的迴圈的執行，並脫離該迴圈。
+continue 的意思是立即中斷最接近 continue 的迴圈的執行，回到迴圈的開頭(continue以下的動作全不做了)。
+
+值得注意的是「最接近」的定義。我們下面的範例程式足以說明 break
+和 continue 的不同。
+
+第一個範例：
+
+/* break.c */
+#include <stdio.h>
+
+void main (void)
+{
+    int i, j;
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf ("i = %d\tj = %d\n", i, j);
+            break;
+            printf ("Loop\n");
+        }
+    }
+}
+
+執行結果：
+
+i = 0   j = 0
+i = 1   j = 0
+i = 2   j = 0
+
+如果我們把 break 換成 continue 呢？
+
+/* break.c */
+#include <stdio.h>
+
+void main (void)
+{
+    int i, j;
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf ("i = %d\tj = %d\n", i, j);
+            continue;
+            printf ("Loop\n");
+        }
+    }
+}
+
+執行結果：
+
+i = 0   j = 0
+i = 0   j = 1
+i = 0   j = 2
+i = 1   j = 0
+i = 1   j = 1
+i = 1   j = 2
+i = 2   j = 0
+i = 2   j = 1
+i = 2   j = 2
+當然啦，break 和 continue 實際上不是這麼應用的，這個例子只是想
+幫助你了解 break 和 continue 的不同。
+
+void main (void)
+{
+    int i, j=0;
+
+    for (i = 0; i < 6; i++)
+    {
+        if (i==3)
+        {
+            printf ("select:i=%d, j=%d\n",i,j);
+            break; //break continue
+            j=j+1;
+            printf ("select:i=%d, j=%d\n",i,j);
+        }
+        else{
+            j=j+1;
+            printf ("i=%d, j=%d\n",i,j);}
+    }
+}
+
+
+*C語言裡並沒有boolean資料型態(只有true和false兩種值),條件是否成立完全是看運算式的結果,若為0表示不成立,不為0表示成立。這一點設計得不好,很容易讓人犯錯,誤把邏輯運算寫成數值運算而不自覺。像java語言就提供了boolean資料型態,且邏輯運算和數值運算不能混用,以免程式撰寫者犯錯。
+位元處理:
+AND 兩者為真才為真,其餘皆為假
+OR 兩者為假才為假,其餘皆為真
+XOR表示兩者相同時為0,兩者不同時為1
+※ http://edisonx.pixnet.net/blog/post/94567132-%5B%E5%A4%A7%E6%95%B8%5D-c-%E8%AA%9E%E8%A8%80%E5%A4%A7%E6%95%B8%E6%BC%94%E7%AE%97%E6%B3%95-for-general-(ii)---%E7%B0%A1%E6%98%93
+※ http://programming.im.ncnu.edu.tw/C_index.html (兼C基礎)
+http://www.cnblogs.com/oomusou/archive/2009/10/31/verilog_signed_overflow.html
+https://tw.answers.yahoo.com/question/index?qid=20091117000015KK09232
+http://www.gauss.com.tw/logic/ch6/6-3.htm
+※ http://dhcp.tcgs.tc.edu.tw/c/p009.htm
+http://squall.cs.ntou.edu.tw/cprog/content/16%20bit%20processing_bw.pdf
+http://pydoing.blogspot.tw/2010/06/c-bitwise.html
+http://www.programmer-club.com.tw/showsametitleN/c/46723.html unsigned char
+http://dhcp.tcgs.tc.edu.tw/c/p009.htm
+C語言 位元相加溢位處理
+http://edisonx.pixnet.net/blog/post/94567132-%5B%E5%A4%A7%E6%95%B8%5D-c-%E8%AA%9E%E8%A8%80%E5%A4%A7%E6%95%B8%E6%BC%94%E7%AE%97%E6%B3%95-for-general-(ii)---%E7%B0%A1%E6%98%93
+http://acm.nudt.edu.cn/~twcourse/BitwiseOperation.html
+*C語言 位元處理int取最後一個bit
+http://www.programmer-club.com.tw/showSameTitleN/c/27303.html
+http://www.cnblogs.com/oomusou/archive/2011/02/16/bit_control.html
+C語言 1byte和char交換, 高低位元互換
+https://www.ptt.cc/bbs/Python/M.1325336904.A.836.html b = ((a << 4) & 0xf0) + ((a >> 4) & 0x0f)
+http://www.programmer-club.com.tw/showSameTitleN/c/41018.html
+word a = 0xde45;
+word b = ((a & 0xff00) >> 8 | (a & 0x00ff) << 8);
+http://xyz.cinc.biz/2016/12/byte-order-endianness.html little &big
+https://blog.jason.party/19/byte-order
+aton與pton
+http://twmht.github.io/blog/posts/cc/atoi_itoa.html  atoi與itoa實作
+https://dotblogs.com.tw/yc421206/archive/2013/04/09/101154.aspx
+
+#include的使用
+http://140.129.118.16/~richwang/99-2-Courses/About_C_Header.pdf
+http://work004.blogspot.tw/2012/06/cc.html
+
+*Kconfig
+http://smalldd.pixnet.net/blog/post/26192034-%E5%B0%87%E8%87%AA%E5%B7%B1%E5%AF%AB%E7%9A%84%E7%A8%8B%E5%BC%8F%E5%8A%A0%E5%85%A5-kernel-%E7%B7%A8%E8%AD%AF%E4%B8%AD-%E2%94%80%E2%94%80-%E7%B7%A8%E5%AF%AB-k
+http://b8807053.pixnet.net/blog/post/3612748-kconfig-language
+(*)makefile & Kconfig & profile (keyword:Kconfig 生效)
+*CFLAGS -D:
+http://bryceknowhow.blogspot.tw/2013/11/linux-cflags-dmakefileglobal.html
+http://10.1.52.201/reviews/r/1855/diff/1?collapse=1#17
+http://10.1.52.201/reviews/r/2095 kidd makefile
+*ASKEY_OBJS-$(CONFIG_ASK_FTR_DNS_CACHE) += rut_dnsproxy.o
+ifeq ($(BRCM_CABLE),y) REAL_OBJS := rcl2_pmip.o rut2_pmip.o stl2_pmip.o\ $(ASKEY_OBJS-y)
+*CMS_DMP_FLAGS :=
+#ifneq ($(strip $(BUILD_IPV6)),) CMS_DMP_FLAGS += -DDMP_DEVICE2_DHCPV6CLIENT_1 CMS_DMP_FLAGS += -DDMP_DEVICE2_DHCPV4SERVER_1
+
+*如何判斷ASK_CUSTOMIZE_SUPPORT是cm還是RG吃的?還是要吃ASK_FTR_DB_Customized ???新竹是用ASK_CUSTOMIZE_SUPPORT
+*580以上Konfig規則: RG吃 CONFIG_ASK， CM吃ASK開頭，Broadcom:datamodel的profile(RG吃)
+http://10.1.52.201/reviews/r/1075/diff/1#index_header BFC_OBJECTS where use?
+http://10.1.52.201/reviews/r/2045/diff/1#3 add when need CONFIG_?
+http://10.1.52.201/reviews/r/1801/diff/1#index_header & http://10.1.52.201/reviews/r/2314/diff/1#9 when use #if or #ifdef?
+http://10.1.52.201/reviews/r/2338/
+*值生效的問題(#define前置處理):
+X:\gitswfish\rbb_cm_src\Bfc\Custom
+XXX_NonVolDefaults.h kDefaultValue_XXX, ex: #define kDefaultValue_RemoteAccessIpAddress(把變數直接宣告在.h檔裡就直接可以在.c/.h檔裡面使用)
+#ifdef define kDefaultValue_RemoteAccessIpAddress
+#undef define kDefaultValue_RemoteAccessIpAddress
+#endif
+與Kconfig(宣告但在.c/.h裡面使用的名稱跟宣告的不同)與COMCAST_SUPPORT(=>如何知道在哪定義與什麼條件能生效?)
+*implicit declaration of function <= 欠缺標頭檔
+http://welkinchen.pixnet.net/blog/post/13496367-implicit-declaration-of-function
+
+*#if 1 和 #ifdef 的差別
+http://blog.sina.com.cn/s/blog_4b4b54da0100r2l6.html
+https://stackoverflow.com/questions/135069/ifdef-vs-if-which-is-better-safer-as-a-method-for-enabling-disabling-compila
+http://adison.logdown.com/notes/235679/difference-between-ifdef-and-if-defined
+http://huenlil.pixnet.net/blog/post/24339151-%5B%E8%BD%89%5D%23ifndef%2C-%23define%2C-%23endif%E7%9A%84%E7%94%A8%E6%B3%95%28%E6%95%B4%E7%90%86%29-
+#if #ifdef和#ifndef的用法和區別
+http://www.111cn.net/net/c/42613.htm
+
+http://imil.au.edu.tw/~hsichcl/TurboC/C_Unit10.htm 資料結構
+※http://imil.au.edu.tw/~hsichcl/DataStructureHandout.htm
+*typedef strut定義結構的方法
+http://bkboy.pixnet.net/blog/post/7358221?pixfrom=related
+http://groangao.pixnet.net/blog/post/24474489-%5Bc,c%2B%2B%5D-typedef-struct-%E7%94%A8%E6%B3%95%E8%AA%AA%E6%98%8E
+http://programming.im.ncnu.edu.tw/Chapter13.htm
+http://blog.csdn.net/zhangyongfeiyong/article/details/54015349
+http://www.quanxue.cn/jc_clanguage/CLang/Clang21.html
+
+*在include *.h宣告後無法馬上指定value?=> typedef struct
+
+*strdup() 使用自由長度size的字串
+=============================output =============================
+char *  imagePtr;
+int tmpcou=0,j;
+while (tmpcou < imageLen)
+{
+  for (j=0; j<16 && tmpcou<imageLen; j++, tmpcou++)
+printf("[%02x]\n", imagePtr[tmpcou]);
+}
+
+
+*printf struct: http://www.linuxquestions.org/questions/programming-9/using-'printf'-on-a-'struct'-125463/
+*printf  http://squall.cs.ntou.edu.tw/cprog/materials/PrintfConversion.html
+*snprintf:
+https://wirelessr.gitbooks.io/working-life/content/snprintf_miao_wu_qiong.html
+https://kheresy.wordpress.com/2010/01/28/%E7%94%A8-snprintf-asprintf-%E5%8F%96%E4%BB%A3%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84-sprintf/
+
+*printf與scanf: https://openhome.cc/Gossip/CGossip/PrintfScanf.html
+
+*fprint沒有fflush的問題:
+http://blog.xuite.net/mb1016.flying/linux/28543400-fflush%28stdout%29
+
+*fgets與fread的差別?  fgets/fputs, fread/fwrite
+http://pl-learning-blog.logdown.com/posts/1102314
+http://people.cs.nctu.edu.tw/~tsaiwn/introcs/03_Labs/More_Handouts/fgetsAns.htm
+http://myprogrammingguide.blogspot.tw/2010/07/fread-fwrite-cc.html 
+http://www.cnblogs.com/AI-Algorithms/p/3391268.html 
+http://monkeycoding.com/?p=919
+http://blog.xuite.net/coke750101/coketech/20715490-%E6%AA%94%E6%A1%88%E8%BC%B8%E5%85%A5%E8%88%87%E8%BC%B8%E5%87%BA
+http://www.programmer-club.com.tw/ShowSameTitleN/homework/5534.html
+http://imil.au.edu.tw/~hsichcl/TurboC/C_Unit12.htm
+http://www.hksilicon.com/articles/710 php
+https://zhidao.baidu.com/question/141607019.html
+讀字串函數fgets函數的功能是從指定的檔中讀一個字串到字元陣列中，函式呼叫的形式為： fgets(字元陣列名，n，文件指針)； 其中的n是一個正整數。表示從檔中讀出的字串不超過 n-1個字元。在讀入的最後一個字元後加上串結束標誌'\0'。例如：fgets(str,n,fp);的意義是從fp所指的檔中讀出n-1個字元送入字元陣列str中。
+fread是用於整塊資料的讀寫函數,可用來讀寫一組資料，如一個陣列元素，一個結構變數的值等。讀資料塊函式呼叫的一般形式為： fread(buffer,size,count,fp),其中buffer是一個指標，在fread函數中，它表示存放輸入資料的首地址。 size 表示資料塊的位元組數。count 表示要讀寫的資料塊塊數。fp 表示文件指針。
+例如：
+fread(fa,4,5,fp); 其意義是從fp所指的檔中，每次讀4個位元組(一個實數)送入實數組fa中，連續讀5次，即讀5個實數到fa中。
+
+fread?入的?容不包括最后的字符串??符，而fgets?包括??，也就是?fread?入的?容不是字符串，因?少一???符，而fgets??入的是一?字符串。
+※ gets和fgets的比較
+* 兩者都是讀到'\n'就會停止，而fgets有限制大小所以大小一到就立刻停
+* gets會一直讀到'\n'才會停止，如果buffer不夠大會造成程式當掉
+* 使用fgets讀入一行字串，其輸入字串如果小於buffer大小的話會含有'\n'，但是使用gets則不會
+* fgets可以用在任何的檔案指標且可以用在stdin，但是gets只用在stdin
+* 使用fgets讀取stream，如果資料超過你buffer大小，則會取出buffer大小的資料，而剩下的資料會留著給下一次資料做讀取
+
+由例子中看到fgets最麻煩的就是換行字元，只要資料輸入不足buffer大小就會出現換行字元'\n'所以要先除掉它，第二就是資料輸入那麼長，可能只要前面的5個字元就好了，後面的字串不想響影下次輸入，這樣的情形以下的想法可能會發生，今天你要取得名字10個字元的字串，班級也是10個字元的字串，現在要開始取資料了，使用者一開始就輸入超過10個字元的字串，這個沒有問題我們的fgets有限大小，所以也讀了10個字元，那剩下那多輸入的列，就留在stream裡面了，這些值是無用值，會造成後面的輸入不正確取得，等你要取班級的10個字元的字串時，你取的是之前留在stream裡面無效用的值，所以我們要清掉我們的stream讓後面不可以一再錯下去。
+※ fgets的修正和增加
+* 修正取完資料中當資料不足時產生的 '\n'換行字元
+* 增加是否要順便清掉stream使得不會讓無用值被下一次取用的時候做為輸入
+* 適用在檔案指標或是stdin，若在檔案指標，有可能已檔案最後一行沒有'\n'所以要加上EOF的判斷
+* http://blog.xuite.net/tzeng015/twblog/113271880-fgets+%E6%94%B9%E6%88%90+fread+%E8%B3%87%E6%96%99%E8%AE%80%E5%8F%96%E5%B0%B1%E6%9C%83%E8%AE%8A%E6%AD%A3%E7%A2%BA
+當你所[餵進去]的資料裡面有 0A 的話程式會以為是換行
+所捉的資料會亂掉
+解釋如下 : ==>新行字元 (\n) 相當於在 ASCII 換行字元 (十六進位 0A)
+
+所以程式比需修改如下才可以正確讀去資料
+==> fgets 改成 fread 資料讀取就會變正確
+http://hsian-studio.blogspot.tw/2008/09/fgets.html
+
+http://programming.im.ncnu.edu.tw/Chapter5.htm  型別範圍
+http://it-easy.tw/c-sizeof/ size
+單位轉換
+*strtol:
+http://blog.xuite.net/tzeng015/twblog/113272225-strtol%EF%BC%88%E5%B0%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%89%E6%8F%9B%E6%88%90%E9%95%B7%E6%95%B4%E5%9E%8B%E6%95%B8%EF%BC%89
+
+*table 使用funtion call，function裡面帶參數是在別的地方填(在call所使用的 stream如何到 ejAskGet還能被引用?(611master ej.c)
+call(char *func, FILE *stream){
+/* Call handler */
+for (handler = &ej_handlers[0]; handler->pattern; handler++) {...}
+}
+=>struct ej_handler ej_handlers[] = {
+  { "Ask", ejAskGet(=>沒有引數) },}
+=>ejAskGet(int argc, char **argv, FILE *stream){
+  fputs(value, stream);
+}(卻有引數)=>因為函 數指標的用法引數填在struct ej_handler {int (*output)(int eid, webs_t wp, int argc, char_t **argv);}handler->output(argc, argv, stream);
+
+*enum 的用途: http://bodscar.pixnet.net/blog/post/61204511-%E8%AA%AA%E6%98%8E-typedef-enum
+*字串
+http://mirlab.org/jang/books/matlabProgramming4beginner/10-3_stringOperation.asp?title=10-3%20%A6r%A6%EA%AA%BA%A4%F1%B8%FB%A1B%B4M%A7%E4%A1B%A5N%B4%AB%A1B%A4%C0%B8%D1%BBP%B5%B2%A6X
+http://openhome.cc/Gossip/CGossip/StringLengthCopyCat.html
+char * argvEx5G[] = {"cgiGetWifi5GChannelSelect", "wlChannelList", "a", "a"};
+char inputTable2[32]={0};
+//strncpy( inputTable2,"var AskWifi2GChannel0 = [0,",32 );
+strncpy( inputTable2, argvEx5G[0],32 );
+//strncpy( inputTable2, argvEx5G[0],strlen(inputTable2) ); 複製0個字
+printf("inputTable2=[%s]\n", inputTable2);
+
+*string.h 的函數:
+*strstr() ，需要兩個字串參數，回傳在第二個參數字串在第一個參數字串首次出現位置的指標
+https://blog.wu-boy.com/2010/08/cc-cstring-string-h-%E5%87%BD%E5%BC%8F%EF%BC%9Astrstr-strchr/
+*(C)strstr搜尋函式：
+https://blog.wu-boy.com/2010/08/cc-cstring-string-h-%E5%87%BD%E5%BC%8F%EF%BC%9Astrstr-strchr/
+※ http://tw.gitbook.net/c_standard_library/c_function_strchr.html
+
+*(C) fscanf() :
+http://www.kaiching.org/2010/07/c-fscanf.html
+
+*(C)sscanf:
+http://blog.xuite.net/takewings/blog/30601015-sscanf+-2+, http://www.cnblogs.com/lyq105/archive/2009/11/28/1612677.html
+http://ccckmit.wikidot.com/cp:sscanf
+*C 語言秘技 (1) – 使用 sscanf 模仿正規表達式
+http://programmermagazine.github.io/201312/htm/article2.html
+https://www.ptt.cc/bbs/C_and_CPP/M.1428633591.A.688.html
+http://rocksaying.tw/archives/3866523.html
+
+*CString
+
+http://dhcp.tcgs.tc.edu.tw/c/p009.htm
+https://www.ptt.cc/bbs/C_and_CPP/M.1416824909.A.E7F.html
+
+http://tw.gitbook.net/c_standard_library/c_function_memcmp.html
+http://man.linuxde.net/hexdump
+
+*assert: https://www.cnblogs.com/ggzss/archive/2011/08/18/2145017.html 
+#include <assert.h>
+(ex1)
+main()
+{
+   int iTotalNumber=10000;
+   assert(iTotalNumber<1000); //當程式執行到該行時，若 iTotalNumber < 1000 則程式可以繼續執行；若iTotalNumber >= 1000 ，則會秀出維護錯誤訊息的字串，並結束程式。
+}
+(ex2)
+FILE *fp;
+
+fp = fopen( "test.txt", "w" );//以可?的方式打?一?文件，如果不存在就?建一?同名文件
+assert( fp );                           //所以?里不?出?
+fclose( fp );
+
+fp = fopen( "noexitfile.txt", "r" );//以只?的方式打?一?文件，如果不存在就打?文件失?
+assert( fp );                           //所以?里出?
+fclose( fp ); 
+*open("/dev/tty",O_RDONLY | O_NONBLOCK): http://c.biancheng.net/cpp/html/238.html
+*fcntl函??明： http://c.biancheng.net/cpp/html/233.html, http://cissco.iteye.com/blog/266924
+1、fcntl()用?操作文件描述?的一些特性.。
+2、??fd 代表欲?置的文件描述?,。
+3、??cmd 代表欲操作的指令
+有5种功能： 
+1.复制一??有的描述符（cmd=F_DUPFD）. 
+2.?得／?置文件描述符??(cmd=F_GETFD或F_SETFD). 
+3.?得／?置文件????(cmd=F_GETFL或F_SETFL). 
+4.?得／?置异步I/O所有?(cmd=F_GETOWN或F_SETOWN). 
+5.?得／?置???(cmd=F_GETLK,F_SETLK或F_SETLKW).
+*旗標O_NONBLOCK與O_NDELAY有何不同？ https://codingnote.blogspot.tw/2007/12/ononblockondelay.html
+所產生的結果都是使I/O變成非擱置模式(non-blocking)，在讀取不到資料或是寫入緩衝區已滿會馬上return，而不會擱置程式動作，直到有資料或寫入完成。
+設立O_NDELAY會使I/O函式馬上回傳0，但是又衍生出一個問題，因為讀取到檔案結尾時所回傳的也是0，這樣無法得知是哪中情況；因此，O_NONBLOCK就產生出來，它在讀取不到資料時會回傳-1，並且設置errno為EAGAIN。
+不過需要注意的是，在GNU C中O_NDELAY只是為了與BSD的程式相容，實際上是使用O_NONBLOCK作為巨集定義，而且O_NONBLOCK除了在ioctl中使用，還可以在open時設定。
+*應用在socket程式上: http://c.biancheng.net/cpp/html/3036.html
+if ((conn_fd = accept(listen_fd, (struct sockaddr *)&usa.sa_in, &sz)) < 0) {
+    cmsLog_error("accept failed with errno=%d", errno);
+    continue;
+ }
+ /* Prevent child process forked by httpd to share the socket. */
+ /* Also make the connection - non-blocking to prevent lockup in fputc() */
+ fcntl(conn_fd, F_SETFD, fcntl(conn_fd, F_GETFD) | FD_CLOEXEC | O_NONBLOCK);
+
+http://it-easy.tw/cprimenumber/ 找質數:先找出規則
+http://it-easy.tw/c-super-large-power/ 大數運算
+*select: 用來循環讀取鍵盤輸入
+*getopt:
+http://swaywang.blogspot.tw/2012/12/cgetoptparsing-command-line.html
+http://blog.xuite.net/tzeng015/twblog/113272138
+http://blog.carlcarl.me/11/c-getopt-usage/
+https://www.ibm.com/developerworks/cn/aix/library/au-unix-getopt.html
+http://carl830.pixnet.net/blog/post/50806433-c%E8%AA%9E%E8%A8%80-getopt%E7%94%A8%E6%B3%95- 
+getopt最常被使用的情境是從main當中取得argc和argv後去做一次性的parsing
+getopt是用來判斷程式參數的函式
+像是./a.out -s 之類的, getopt能對後面的-s這類參數做判斷處理
+一開始要使用的話記得先
+#include <unistd.h>
+
+getopt有三個參數(int argc, char* argv[], const char* optsting)
+    optarg——指向?前????（如果有）的指?。
+    optind——再次?用 getopt() ?的下一? argv 指?的索引。
+    optopt——最后一?已知??。
+?定了命令??的?量 (argc)、指向?些??的?? (argv) 和??字符串 (optstring) 后，getopt() ?返回第一???，并?置一些全局?量。使用相同的??再次?用?函??，它?返回下一???，并?置相?的全局?量。如果不再有??到的??，?返回 -1，此任?就完成了。
+第一個和第二個就直接把main裡頭的參數丟進去就好了,第三個參數就是用來處理前面講到的-s的這類參數
+舉個例子來講 像是optstring = "abf"的話 就能夠抓到這三個參數值 如
+"./a.out -a" 或 "./a.out -b" 或 "./a.out -abf" 都OK
+*正規表示式: https://atedev.wordpress.com/2007/11/23/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%A4%BA%E5%BC%8F-regular-expression/
+
+*Java 有?有和C中sscanf相似的函?: import java.io.*; BufferedReader br=new BufferedReader(new InputStreamReader(System.in),1);
+https://zhidao.baidu.com/question/131653278.html
+
+*strspn() ，需要兩個字串當作參數，計算經過幾個字元會在第一個參數的字串遇到不屬於第二個參數字串中的字元
+*int strcasecmp(const char *s1, const char *s2);
+int strncasecmp(const char *s1, const char *s2, size_t n);
+定義函數：int strncasecmp(const char *s1, const char *s2, size_t n);
+函數說明：strncasecmp()用來比較參數s1 和s2 字串前n個字元，比較時會自動忽略大小寫的差異。
+返回值：若參數s1 和s2 字串相同則返回0。s1 若大於s2 則返回大於0 的值，s1 若小於s2 則返回小於0 的值
+
+*字串切割: http://pl-learning-blog.logdown.com/posts/1084611, strtok():
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main() {
+   char str[] = "This is a good example"; //要被分割的
+   char *s = strtok(str, " "); //分割的判斷字元
+   char *put[100]; //分割後放入新的字串陣列
+   int s_count=0; //分幾個了
+
+
+   while(s != NULL) {
+     put[s_count++]=s;  //把分出來的丟進去 結果陣列
+     s = strtok(NULL, " "); //我不知道 這行幹嘛
+   }
+
+
+   for(int x=0;x<s_count;x++) //驗收成果
+      printf("%d %s\n",x,put[x]);
+
+
+   system("pause");
+   return 0;
+ }
+/*補充 其實改成 strtok(str," @"); 這樣的話
+ 即使是 This@is a good@example
+  也會分成 "This" "is" "a" "good" "example" 了*/
+
+
+GetSystemDirectory Function  http://msdn.microsoft.com/en-us/library/ms724373(VS.85).aspx
+
+http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?topic_id=60354
+http://bbs.csdn.net/topics/250043164 List isEmpty()
+
+http://www.programmer-club.com.tw 程式俱樂部
+http://www.eettaiwan.com/SEARCH/ART/%BC%C8%BAA.HTM?jumpto=view_welcomead_1405482153498 電子工程論壇
+http://de.selfhtml.org/ 大雜燴
+http://ccckmit.wikidot.com/teach 一堆教科書
+http://news.cnblogs.com/n/209014/ 傅立葉轉換
+http://www.books.com.tw/products/0010042739
+C語言教學
+http://pydoing.blogspot.tw/2012/10/c-tutorial.html
+C#TCP 程式設計->第一篇C語言基礎入門應用程式設計 - 東方設計...
+http://sites.google.com/site/jingprogram/scratch/if
+http://163.23.148.11/~computer/cpp.htm
+http://ccckmit.wikidot.com/cp:pragma
+http://emn178.pixnet.net/blog/post/87739443 氣泡排序法
+http://life.iiietc.ncu.edu.tw/xms/content/show.php?id=1506
+http://meanz.pixnet.net/blog/post/30324433-%E9%9D%A2%E8%A9%A6%E8%B3%87%E6%96%99%E5%82%99%E4%BB%BD
+http://blogkrogh.blogspot.tw/2011/01/c.html
+http://imil.au.edu.tw/~hsichcl/C_OnLine.htm
+http://user.frdm.info/ckhung/b/c/index.php
+http://www.programmer-club.com.tw/ShowSameTitleN/c/33173.html printf不固定數
+http://seed100.com/php-mysql-101-questions/other/c-language-address.htm
+http://wp.mlab.tw/?p=176
+*C語言高效編程的四大絕招:
+http://stenlyho.blogspot.tw/2007/04/c_3670.html
+http://stenlyho.blogspot.tw/2007/04/c.html
+第一招：以空間換時間:函數:費時，巨集:占用大量空間
+第二招：數學方法解決問題
+第三招：使用位操作:J = 456 % 32;=>J = 456 - (456 >> 4 << 4);運用這招需要注意的是，因為CPU的不同而產生的問題。比如說，在PC上用這招編寫的程式，並在PC上調試通過，在移植到一個16位機平臺上的時候，可能會產生代碼隱患。所以只有在一定技術進階的基礎下才可以使用這招。
+第四招 :使用彙編嵌入:雖然是必殺技，但是如果輕易使用會付出慘重的代價。這是因為，使用了嵌入彙編，便限制了程式的可攜性
+http://stenlyho.blogspot.tw/2007/04/c_04.html 巨集的技巧
+*============================================================================================*
+#include <iostream.h>
+#include <stdlib.h>
+
+void output_three();
+
+void main()
+{
+output_three();
+
+system("PAUSE");
+
+} 
+
+void output_three()
+{
+cout << "輸出一個3" << endl;
+}
+
+最前面的void output_three();, 這個叫做函式藍圖 (function prototype), 主要的作用是宣告這個函式.
+
+在void main()主函式中的output_three();, 這個叫做 函式呼叫 (function call), 作用當然就是呼叫執行這個函式囉.
+
+後面的void output_three, 這個叫做函式標頭 (function header), 標頭必須與藍圖對應. 而之後的 {} 中的就是要執行的程式碼了.
+
+class numbers
+{
+private:
+int number1;
+double number2;
+
+public:
+numbers();
+~numbers();
+void output();
+};
+這種class的寫法就是所謂的標頭 (Header), 他只會將所有的成員列出來, 而不會深入討論其內容.
+http://www.study-area.org/coobila/category_C++_u6559_u5B78.html 
+
+http://futureatm.pixnet.net/blog/post/46104730-c%2B%2B-%E6%95%99%E5%AD%B8%E7%B6%B2%E7%AB%99, http://www.runoob.com/cplusplus/cpp-tutorial.html
+https://tw.voicetube.com/videos/40511
+
+http://ccc.nqu.edu.tw/wd.html#js1:home  
+http://ccc.nqu.edu.tw/web/lowan/web/lwide.html
+https://www.codecademy.com/learn/all
+C++:
+http://jashliao.pixnet.net/blog/post/160384133
+http://askalee.blogspot.tw/2007/05/c-destructorvirtual-destructor.html
+http://pydoing.blogspot.tw/2015/02/cppg-12.html
+C++: 
+http://mail.im.tku.edu.tw/~mahler/publish/C++Tutorial.pdf
+http://www.cnblogs.com/oomusou/category/85735.html
+https://www.facebook.com/groups/174663669357128/
+http://www.cnblogs.com/oomusou/archive/2007/01/18/623287.html
+http://140.127.40.1/~jwu/c/cpgch16.htm
+
+台大資工(基礎C++程式語言設計班):
+http://www.csie.ntu.edu.tw/train/course_program.php
+*21天?通C++
+http://blog.csdn.net/l_badluck/article/details/17851911
+http://blog.csdn.net/JL_Gao/article/details/43791299
+*============================================================================================*
+http://tw.search.yahoo.com/search?p=vc.net+%E9%99%A3%E5%88%97%E5%84%B2%E5%AD%98&fr=yfp&ei=utf-8&v=0
+
+C different function in different file, C++ different function in the same file.
+C與C++不同處: https://openhome.cc/Gossip/CGossip/index.html
+*C和C++間struct的深層區別:在C++語言中struct具有了“類”　的功能，其與關鍵字class的區別在於struct中成員變數和函數的默認訪問許可權為public，而class的為private;另外一點需要注意的是：C++中的struct保持了對C中struct的全面相容（這符合C++的初衷——“a better c”）:在C語言中，當結構體中存在指標型成員時，一定要注意在採用賦值語句時是否將2個實例中的指標型成員指向了同一片記憶體。在C++語言中，當結構體中存在指標型成員時，我們需要重寫struct的拷貝構造函數並進行“=”操作符重載。
+
+
+*new&malloc http://blog.csdn.net/xiaorenwuzyh/article/details/44514815#t2, http://www.programmer-club.com.tw/showSameTitleN/c/25457.html, http://www.programmer-club.com.tw/ShowSameTitleN/c/43593.html, http://www.programmer-club.com.tw/ShowSameTitleN/c/41180.html, http://www.programmer-club.com.tw/showSameTitleN/c/27921.html, http://www.programmer-club.com.tw/ShowSameTitleN/c/34973.html
+在 C++ 中，我們用 new 取代了 malloc 的功能：
+Typename can be any basic data type or user-defined object (enum, class,and structincluded). If typename is of class type, the default constructor is called to construct the object.
+和 malloc 一樣，new 可以創造出系統內建data type 或是使用者自訂 data type 的指標，並且 return 一個指標指向該物件。
+
+和 C 不同的是，我們可以直接使用 new 指定初始值，例如
+int* p_scalar = new int(5);
+
+int* p_array = new int[5]; 
+等同於：
+int* p_array;
+p_array = (int*) malloc (sizeof(int)*array_size);   // 顯然 new 簡單多了！
+
+int *p_var = new int;
+int *p_array = new int[50];
+
+delete p_var;
+delete [] p_array;
+
+* new 無法對 array 初始化
+* 如果該型別沒有 default constructor，初始化時 complie 會出現錯誤（不會自動給空間）
+* 二維以上的陣列在C++通常都會偏好使用 Vector 宣告
+
+*BcmMibBridge *pBridge;
+pBridge = new AskeyDb_cmSshGroupBridge(pAgent);
+why pBridge = new BcmMibBridge;
+=>複習繼承 http://openhome.cc/Gossip/CppGossip/PublicInheritance.html
+
+http://c.biancheng.net/cpp/biancheng/cpp/rumen/
+C++筆記: http://awei791129.pixnet.net/blog/post/8417786-%5Bc%5Cc%2B%2B%5D-%E5%B9%BE%E5%80%8B%E4%B8%8D%E9%8C%AF%E7%9A%84c%E8%AA%9E%E8%A8%80%E8%B3%87%E6%BA%90%E7%AB%99, https://pydoing.blogspot.tw/2012/10/cpp-Understanding-of-cpp-progamming-language.html, https://www.youtube.com/watch?v=WCpHAWsnS-4, http://lakesd6531.pixnet.net/blog/post/344207998
+*C/C++的Scope共有6种：global、class、namespace、local、block、statement (C++ Primer 4th P.75) 。其中比?特?的是block scope，只要在curly brace {} 之?，就自成一?scope。http://www.cnblogs.com/oomusou/archive/2006/10/08/523274.html
+http://expect7.pixnet.net/blog/post/38682120 物件導向
+*class是C++中用來封裝資料的關鍵字，當您使用類別來定義一個物件（Object）時，您考慮這個物件可能擁有的:
+「屬性」（Property）(物件的靜態描述)
+「方法」（Method）(可施加於物件上的動態操作)
+*物件導向的三個特色：封裝、繼承、多型，其中最重要的多型，C++是靠繼承和Dynamic Binding達成，Dynamic Binding的前提就是virtual function。interace概念如同contract，是個只有定義但沒有實做的class，C++中使用abstract base class拿達成(請參考(原創) 如何使用abstract base class模擬interface? (C/C++))，一個class可能必須實做多個contract，C++因為有多重繼承機制，所以使用class多重繼承即可實做多個interface。但C#、Java都沒有多重繼承，所以無法使用class繼承來達到同時實做多個interface的要求，只好另外提出了interface概念，當然這和abstract class功能有所重複，所以很多C#的書上說，interface和abstract class的差別在於，一個class可以同時實做多個interface，但只能繼承一個abstract class http://www.cnblogs.com/oomusou/archive/2007/03/17/677832.html
+※繼承/多重繼承 http://123android.blogspot.tw/2012/01/c_25.html, 類別、物件、多載: http://123android.blogspot.tw/2012/01/c.html, 建構與解構元: http://ublearning.blogspot.tw/p/c.html, 建構函式就是類別的「方法」，主要對物件進行初始化設定，當對類別進行「實體化(new)」成為物件時，便會自動執行建構函式。
+https://openhome.cc/Gossip/CppGossip/ConstructorDestructor.html  JustinHere(良葛格)
+https://www.ptt.cc/bbs/C_and_CPP/M.1387272060.A.921.html
+*class use/virtual: destructor最好宣告成virtual，以避免多型下產生的destructor問題 http://blog.xuite.net/kamory0931/fightdreamer/41450577-%E7%B9%BC%E6%89%BF%E8%88%87+destructor,  https://kheresy.wordpress.com/2014/10/03/override-and-final-in-cpp-11/
+多態性 (polymorphism) 與 虛擬函式 (virtual functions)
+什麼是多態性 (polymorphism) 呢?多態性就是當你對一個擁有特殊性質的物件進行函式呼叫, 出來的結果可能來自兩個不同的類別.
+*當我們談到虛擬函數 (virtual function 或 virtual method) 時, 總是會和 "繼承" 與 "多型" 牽扯在一起，虛擬函數存在的目的就是讓衍生類別可以自行設計修改原有之函數行為.
+http://jashliao.pixnet.net/blog/post/204701824-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%EF%BC%9A%E5%A4%9A%E8%BC%89==%E5%A4%9A%E5%9E%8B%E3%80%8E%3F%E3%80%8F 多載/多型
+函數多載 Function Overloading :讓我們可以使多個函數共用同一個函數名, 此一作法主要是讓這些函數雖然使用不同的引數串列確可以執行同樣的行為
+
+*interface和abstract class有何不同?這兩個的確非常的像，主要都是為了實踐『多型』，但實際的用途並不一樣。何時該使用interface?何時該使用abstract class?interface用在當一個物件須和其他物件共同合作時，為了確保其他物件有我想要的method，所以定下interface要該物件遵守，在Design Pattern到處可以看到這種應用，如strategy，bridge，prototype...。而abstract class是用在整個繼承體系的最上層，用來定義出整個繼承體系該有哪些method，子類別可以對這些method加以override，或維持和abstract class相同的功能。Design Pattern中的template method，factory method...等就是用這種手法。 http://www.cnblogs.com/oomusou/archive/2007/05/07/738311.html
+*為什麼C#、Java需要提供interface? 很多人學習C#、Java，都被interface和abstract class所搞混，不知什麼時候該用interface，什麼時候該用abstract class，但學C++時卻很單純，因為C++只用一套virtual function和多重繼承就全部解決了。 http://www.cnblogs.com/oomusou/archive/2007/03/26/687727.html
+
+*類別、物件、方法  http://www.study-area.org/coobila/tutorial_422.html, https://blog.miniasp.com/post/2009/08/27/OOP-Basis-What-is-class-and-object.aspx, http://hinoto424.blogspot.tw/2010/11/iphone-objective-c-01.html,  https://ramihaha.tw/c-program-class-object-instance-difference/
+cannot call member function without object
+https://stackoverflow.com/questions/1127738/cannot-call-member-function-without-object
+#include "std_lib_facilities.h"
+class Name_pairs
+{
+public:
+  void print();
+private:
+  vector<string>names;
+  vector<double>ages;
+  string name;
+  double age;
+};
+
+void Name_pairs::read_ages()
+{
+  cout << "Enter corresponding age: ";
+  cin >> age;
+  ages.push_back(age);
+  cout << endl;
+}
+
+Name_pairs::print();=>錯誤
+
+class與struct有很明顯的的差別是，class可以定義member function，但struct不行。另外，class預設的member權限是private，而struct預設則是public。 http://twmht.github.io/blog/posts/cc/class.html
+http://ccckmit.wikidot.com/cp:cobject
+
+
+*class是使用. :
+Name_pairs np;
+np.print();
+
+*vector<AskGuiUserEntry *>::const_iterator myIterator;
+http://123android.blogspot.tw/2012/01/cvectoriterators.html , http://dangerlover9403.pixnet.net/blog/post/98733652-%5B%E6%95%99%E5%AD%B8%5Dc++-vector%E8%A9%B3%E7%B4%B0%E7%94%A8%E6%B3%95, http://puremonkey2010.blogspot.tw/2014/08/c-gossip-array-idiom-vector.html, http://www.cplusplus.com/reference/vector/vector/
+(*myIterator)->ResetDefaults();=>void VendorUiNonVolSettings::ResetDefaults(NonVolSection section)
+not void AskGuiUserEntry::ResetDefaults(void) =>why???
+(1)function實際定義的位置 BcmNonVolDevice *pNonVolDevice = BcmNonVolDevice::GetSingletonInstance();
+在class BcmNonVolDevice static BcmNonVolDevice *GetSingletonInstance(void);
+(2)CpeSnmpAgent *BcmCmDocsisFactory::NewCmCpeSnmpAgent ()
+function的return value是class CpeSnmpAgent type
+(3)C++中使用switch..case語句的易出錯陷阱和規避方法
+http://www.cnblogs.com/zhugehq/p/5947699.html
+(4)extern: http://b8807053.pixnet.net/blog/post/3612202-c%2B%2B%E4%B8%ADextern-c%E5%90%AB%E7%BE%A9%E6%B7%B1%E5%B1%A4%E6%8E%A2%E7%B4%A2
+http://blog.xuite.net/tsai.oktomy/program/11610892-C%2B%2B%E4%B8%AD%E7%9A%84extern%E7%94%A8%E6%B3%95+
+https://home.gamer.com.tw/creationDetail.php?sn=959807
+http://blog.xuite.net/tsai.oktomy/program/11724690
+http://xyz.cinc.biz/2013/04/c-extern.html
+extern char *wlmngr_getPhyType(int idx); //#include "wlmngr.h"
+(5)C++ this:http://c.biancheng.net/cpp/biancheng/view/201.html
+(6)undefined reference to
+http://blog.xuite.net/raibura/dorama/382929936-Linux+%3A+gcc+undefined+reference+to+function+%E7%9A%84%E5%95%8F%E9%A1%8C%E8%A7%A3%E6%B1%BA
+https://read01.com/GAQBKx.html
+http://jax-work-archive.blogspot.tw/2010/10/cc-undefined-reference-to.html
+()指標 http://lionrex.pixnet.net/blog/post/48625320-c%2B%2B%E6%95%99%E5%AD%B8%28%E4%BA%8C%E5%8D%81%E4%B8%80%29%3A%E6%8C%87%E6%A8%99%E9%99%A3%E5%88%97
+
+http://tresia.pixnet.net/blog/post/27177722-%5B%E9%BB%91%E6%9D%BF%5D-c%2B%2B-%E5%AE%A3%E5%91%8A%E5%8B%95%E6%85%8B%E7%B5%90%E6%A7%8B%E7%9A%84%E6%96%B9%E5%BC%8F---new C++ 宣告動態結構的方式 - NEW
+
+會將一個函數的輸入值放在括號中。
+一個不需要回傳值的C++函數被稱為虛無函數(void function)，並被限定在函數名稱前使用void這個字表示之。
+知識家搜尋:c++陣列
+http://tw.knowledge.yahoo.com/question/question?qid=1508102106481
+http://tw.knowledge.yahoo.com/question/question?qid=1509111905902
+http://www.programmer-club.com.tw/ShowSameTitleN/vs2008/215.html
+http://www.hkitn.com/article.php?articleid=4091
+*深度?文教你?底掌握C++/C指?: http://blog.csdn.net/xierhacker/article/details/52516742
+c++ linked list:
+https://pisces1026.wordpress.com/2017/09/21/cc-linked-list/ , https://kopu.chat/2017/06/02/c-%E8%AA%9E%E8%A8%80%EF%BC%9A%E9%8F%88%E7%B5%90%E4%B8%B2%E5%88%97linked-list%E7%9A%84%E5%BB%BA%E7%AB%8B%E8%88%87%E5%88%AA%E9%99%A4/ 
+http://dangerlover9403.pixnet.net/blog/post/108756341-%5B%E6%95%99%E5%AD%B8%5D-linked-list---linked-list-sort
+http://alrightchiu.github.io/SecondRound/linked-list-xin-zeng-zi-liao-shan-chu-zi-liao-fan-zhuan.html
+http://monkeycoding.com/?p=985
+*============================================================================================*
+作者: cole945 (躂躂..) 轉自 PTT LinuxDev 用gcc-自製-library
+https://kaineshu.wordpress.com/2007/05/02/%E8%BD%89%E8%B2%BC%E7%94%A8gcc-%E8%87%AA%E8%A3%BD-library/
+C陷阱:
+http://ashinzzz.blogspot.tw/2013/12/extern-static.html
+http://www.hmhsieh.idv.tw/kjasp/ch16/Vb/RD/PL/PL004.ASP
+*在.c檔使用Linux指令:
+http://blog.xuite.net/ian11832/blogg/32024786-C%E8%AA%9E%E8%A8%80%E7%AD%86%E8%A8%98
+C呼叫shell:
+http://jarsing.blogspot.tw/2008/02/linuxc.html
+http://stackoverflow.com/questions/3736210/how-to-execute-a-shell-script-from-c-in-linux
+http://stackoverflow.com/questions/5237482/how-do-i-execute-external-program-within-c-code-in-linux-with-arguments 
+#include <unistd.h> //for fork use
+    int status;
+
+    // By calling fork(), a child process will be created as a exact duplicate of the calling process.
+    // Search for fork() (maybe "man fork" on Linux) for more information.
+    if(fork() == 0){ 
+        // Child process will return 0 from fork()
+        printf("I'm the child process.\n");
+        status = system("sh my_app.sh");
+        exit(0);
+    }else{
+        // Parent process will return a non-zero value from fork()
+        printf("I'm the parent.\n");
+    }
+
+    printf("This is my main program and it will continue running and doing anything i want to...\n");
+
+fred@fred-linux:~/611httpd_flow/firewall$ gcc test.c 
+fred@fred-linux:~/611httpd_flow/firewall$ ./a.out 
+fred@fred-linux:~/611httpd_flow/firewall$ sh: my_app.sh: command not found
+
+shell呼叫C:
+http://stackoverflow.com/questions/14601430/how-to-run-a-c-program-in-bash-script-and-give-it-2-arguments
+(1)my_app.sh
+#!/bin/bash
+./app
+(2)fred@fred-linux:~/611httpd_flow/firewall$ gcc gs.c -o app
+(3)fred@fred-linux:~/611httpd_flow/firewall$ bash my_app.sh
+
+*system回傳值：
+https://ddy1280.tian.yam.com/posts/14196868
+1.在shell script 裡是透過exit 返回時帶回傳值, 在C 與 shell 裡的慣例 0 為正常結束，非0 則為異常
+2.在C 程式裡其中 ret 值要除以256才會得到與shell 傳回相符的值
+
+https://www.gomcu.com/cclinuxsyste/
+ 為了更好的理解system()函數返回值，需要瞭解其執行過程，實際上system()函數執行了三步操作：
+1.fork一個子進程；
+2.在子進程中調用exec函數去執行command；
+3.在父進程中調用wait去等待子進程結束。
+對於fork失敗，system()函數返回-1。
+如果exec執行成功，也即command順利執行完畢，則返回command通過exit或return返回的值。
+（注意，command順利執行不代表執行成功，比如command：”rm debuglog.txt”，不管文件存不存在該command都順利執行了）
+如果exec執行失敗，也即command沒有順利執行，比如被信號中斷，或者command命令根本不存在，system()函數返回127.
+如果command為NULL，則system()函數返回非0值，一般為1.
+popen和system都可以執行外部命令。 
+popen相當於是先創建一個管道，fork，關閉管道的一端，執行exec，返回一個標準的io文件指針。 
+system相當於是先後調用了fork， exec，waitpid來執行外部命令 
+popen本身是不阻塞的，要通過標準io的讀取使它阻塞 
+system本身就是阻塞的。
+
+http://b8807053.pixnet.net/blog/post/339561908-linux-c%E7%A8%8B%E5%BC%8F%E5%91%BC%E5%8F%AB%E5%A4%96%E9%83%A8%E7%A8%8B%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95 （※driver教學）Linux C程式呼叫外部程式的方法
+system()會呼叫fork()產生子行程，由子行程來呼叫/bin/sh -c string來執行參數string字串所代表的命令，此命令執行完後隨即返回原呼叫的行程。在呼叫system()期間SIGCHLD 信號會被暫時擱置，SIGINT和SIGQUIT 信號則會被忽略。
+
+返回值 如果system()在呼叫/bin/sh時失敗則返回127，其他失敗原因返回-1。若參數string為空指針(NULL)，則返回非零值。如果system()呼叫成功則最後會返回執行shell命令後的返回值，但是此返回值也有可能為system()呼叫/bin/sh失敗所返回的127，因此最好能再檢查errno 來確認執行成功。
+附加說明 在編寫具有SUID/SGID許可權的程式時請勿使用system()，system()會繼承環境變數，通過環境變數可能會造成系統安全的問題。
+
+http://www.blueshop.com.tw/board/FUM20050124191259IGD/BRD20070120150417EVK.html
+請問一下大大們：
+使用 C語言使用 system 函示去呼叫另一個執行檔後，有什麼方法能抓取system內*.exe執行完後的 return code ??
+例如：system(ProgStr); ProgStr 為我欲執行的另一個執行檔它本身有 return code 給系統。
+在我查閱過 system 此函數，它本身只會去判斷命令是否正常的執行而給回成功與失敗的code，
+而不是所呼叫執行檔回傳的return code。
+不知大大們是否有其它好意見，能供我去進行？ 感謝!!! 
+1.將該*.exe的結果存到一個暫存檔後結束副程式
+2.主程式在該副程式返回後馬上讀取該暫存檔
+這是本人在主副程式資料傳遞慣用方法參考看看
+(不過用的是小功能卻常用此法時(時常被叫用到)效能會大打折扣所以須小心) 
+3.使用_spawnl函數，它的return value就是另一個process的exit code. 
+
+https://www.ptt.cc/bbs/C_and_CPP/M.1478689043.A.86D.html
+*======================================================================*
+https://hackmd.io/s/HyIdoLnjl
+http://blog.haipo.me/?p=1065
+
+*endl 是個(特)殊值,稱為操控器(manipulator),當這個值被寫(至) output stream 時,會輸出一個換行符號並將輸出裝置的緩衝區(buffer)清空。藉由清空緩衝區我們便能確定用戶立即看到寫(至) stream 的文字。
+程式員經常在除錯(debugging)時插入一些列印述句。這種述句一定要記得清空 stream,否則輸出
+文字(有)可能在程式當掉時殘留於緩衝區,導致對程式當掉位置的錯誤推斷。
+
+*編寫 C++ 程式時,大部分空白都可以換行符號取(代)之。例外之一是,字面常數內的空白不能以換
+行符號替(代)。例外之二是,預處理器指令不允許(有)空白。
+
+*「給變數一個初值」幾乎永遠是正確的行為,但並不是非那麼做不可。如果我們很肯定第一次使用某變數時會給它一個值,那麼就沒(有)必要為它設想一個初值。例如我們在 p.6 第一個「(有)所事事」的程式中定義了未初始化變數,隨後立刻把值讀入。如果我們無法保證為某變數讀取數值之前該變數會被重新設值(reset),就應該將它初始化。
+
+*undefined reference to ... collect2: ld returned 1 exit status : undefined reference to `AskeyDb_cmDocsisGroup::AskeyDb_cmDocsisGroup[in-charge]()' collect2: ld returned 1 exit status
+
+宣告一??量?，若?去用，是否?浪??存? (C/C++) (C) http://www.cnblogs.com/oomusou/archive/2006/10/07/522574.html
+https://www.slideshare.net/ccckmit/c-58955508
+*一個好的習慣希望大家在配置記憶體時能夠養成：
+宣告後要做配置成功與否的檢查！
+if ( ptr==NULL ) { //當失敗時該做的收尾工作！ };
+(
+DataType *ptr = (DataType*) malloc(所需的記憶空間的 bytes 數);
+例如：要配置 2000 個整數(int)型態的記憶體空間可以使用下列的程式碼：
+ int *data = (int*) malloc( sizeof(int)*2000);
+)
+http://squall.cs.ntou.edu.tw/cprog/materials/DynamicMemoryAllocation.html
+http://lee.logdown.com/posts/98518/c-through-the-function-malloc-memory-configuration 
+http://blog.xuite.net/mytune/notes/21263326-%E6%B7%BA%E8%AB%87C%E4%B8%AD%E7%9A%84malloc%E5%92%8Cfree 
+
+*memset ,memcpy 和strcpy 的根本區別 
+http://lionrex.pixnet.net/blog/post/63848807-%5Bc%2B%2B%5D-memset%2C-memcpy%2C-strcpy
+
+*判斷看跑哪個func的技巧
+#if defined(SUPPORT_DM_LEGACY98)
+#define BcmWl_GetVar_dmx(n, v)           BcmWl_GetVar((n), (v))
+//#error GetVar 1111111111111111111
+#elif defined(SUPPORT_DM_HYBRID)|| !defined(SUPPORT_WLMNGR2)
+//#error GetVar 2222222222222222222
+#define BcmWl_GetVar_dmx(n, v)           BcmWl_GetVar((n), (v))
+#elif defined(SUPPORT_DM_PURE181)
+//#error GetVar 3333333333333333333
+#define BcmWl_GetVar_dmx(n, v)           BcmWl_GetVar_dev2((n), (v))
+#elif defined(SUPPORT_DM_DETECT)
+//#error GetVar 4444444444444444444
+#define BcmWl_GetVar_dmx(n, v)           (cmsMdm_isDataModelDevice2() ? \
+                                          BcmWl_GetVar_dev2((n), (v)) : \
+                                          BcmWl_GetVar((n), (v)))
+#endif
+
+*'Uint8Set' is used as a type, but is not defined as a type.
+http://www.cplusplus.com/forum/general/23754/
+https://bytes.com/topic/c/answers/603846-ifstream-used-type-but-not-defined-type
+http://forums.codeguru.com/showthread.php?391238-is-used-as-type-but-not-defined-as-type
+
+
+
+=*=*=*=*=*=*=*=*=*=
+https://cread.jd.com/read/startRead.action?bookId=30358403&readType=1 
+嵌入式Linux與物聯網軟件開發：C語言內核深度解析:http://www.books.com.tw/products/CN11392279
+作者： 朱有鵬，張先鳳
+ISBN：9787115432940
+規格：237頁 / 普通級 / 1-1
+出版地：大陸
+第1章 C語言與內存
+1.1 引言
+1.2 計算機程序運行的目的
+1.2.1 什麼是程序
+1.2.2 計算機運行程序的目的
+1.2.3 靜態內存SRAM和動態內存DRAM
+1.2.4 馮‧諾伊曼結構和哈佛結構
+1.2.5 總結：程序運行為什麼需要內存呢
+1.2.6 深入思考：如何管理內存（無OS時，有OS時）
+1.3 位、字節、半字、字的概念和內存位寬
+1.3.1 深入了解內存（硬件和邏輯兩個角度）
+1.3.2 內存的邏輯抽象圖（內存的編程模型）
+1.3.3 位和字節
+1.3.4 字和半字
+1.3.5 內存位寬（硬件和邏輯兩個角度）
+1.4 內存編址和尋址、內存對齊
+1.4.1 內存編址方法
+1.4.2 關鍵：內存編址是以字節為單位
+1.4.3 內存和數據類型的關系
+1.4.4 內存對齊
+1.5 C語言如何操作內存
+1.5.1 C語言對內存地址的封裝
+1.5.2 用指針來間接訪問內存
+1.5.3 指針類型的含義
+1.5.4 用數組來管理內存
+1.6 內存管理之結構體
+1.6.1 數據結構這門學問的意義
+1.6.2 最簡單的數據結構：數組
+1.6.3數組的優缺點
+1.6.4 結構體隆重登場
+1.6.5 題外話：結構體內嵌指針實現面向對象
+1.7 內存管理之棧（stack）
+1.7.1 什麼是棧
+1.7.2 棧管理內存的特點（小內存、自動化）
+1.7.3 棧的應用舉例：局部變量和函數調用
+1.7.4 棧的約束（預定棧大小不靈活，怕溢出）
+1.8 內存管理之堆
+1.8.1 什麼是堆
+1.8.2 堆管理內存的特點（大塊內存、手工分配／使用／釋放）
+1.8.3 C語言操作堆內存的接口（malloc／free）
+1.8.4 堆的優勢和劣勢（管理大塊內存、靈活、容易內存泄漏）
+1.8.5 靜態存儲區
+課后題
+第2 章C語言位操作
+2.1 引言
+2.2 常用位操作符
+2.2.1 位與（&）
+2.2.2 位或（|）
+2.2.3 位取反（～）
+2.2.4 位異或（；）
+2.2.5 左移位（＜＜）
+2.2.6 右移位（＞＞）
+2.3 位操作與寄存器
+2.3.1 寄存器的操作
+2.3.2 寄存器特定位清零用&
+2.3.3 寄存器特定位置1用|
+2.3.4 寄存器特定位取反用～
+2.4 位運算構建特定二進制數
+2.4.1 使用移位獲取特定位為1的二進制數
+2.4.2 結合位取反獲取特定位為0的二進制數
+2.4.3 總結
+2.5 位運算實戰演練1
+2.5.1 給定整型數a，設置a的bit3，保證其他位不變
+2.5.2 給定整型數a，設置a的bit3～bit7，保持其他位不變
+2.5.3 給定整型數a，清除a的bit15，保證其他位不變
+2.5.4給定整型數a，清除a的bit15～bit23，保持其他位不變
+2.5.5 給定整型數a，取出a的bit3～bit8
+2.5.6 用C語言給寄存器a的bit7～bit17賦值937（其余位不受影響）
+2.6 位運算實戰演練2
+2.6.1 用C語言將寄存器a的bit7～bit17中的值加17（其余位不受影響）
+2.6.2 用C語言給寄存器a的bit7～bit17賦值937，同時給bit21～bit25賦值17
+2.7 技術升級：用宏定義來完成位運算
+2.7.1 直接用宏來置位
+2.7.2 直接用宏來復位
+2.7.3 截取變量的部分連續位
+課后題
+第3章指針才是C語言的精髓
+3.1 引言
+3.2 指針到底是什麼
+3.2.1 普通變量
+3.2.2 指針變量
+3.2.3 變量空間的首字節地址，作為整個空間的地址
+3.2.4 指針變量的類型作用
+3.2.5 為什麼需要指針
+3.2.6 高級語言如Java、C#的指針到哪里去了
+3.2.7 指針使用之三部曲
+3.3 理解指針符號
+3.3.1 星號*的理解
+3.3.2 取地址符&的理解
+3.3.3 指針變量的初始化和指針變量賦值之間的區別
+3.3.4 左值與右值
+3.3.5 定義指針后，需要關心的一些內容
+3.4 野指針與段錯誤問題
+3.4.1 什麼是野指針
+3.4.2 野指針可能引發的危害
+3.4.3 野指針產生的原因
+3.4.4 如何避免野指針
+3.4.5 NULL到底是什麼
+3.4.6 段錯誤產生的原因匯總
+3.5 const關鍵字與指針
+3.5.1 什麼是const
+3.5.2 const對於普通變量的修飾
+3.5.3const修飾指針的三種形式
+3.5.4 const的變量真的不能改嗎
+3.5.5 為什麼要用const
+3.5.6 有關變量和常量的探討
+3.6 深入學習數組
+3.6.1 為什麼需要數組
+3.6.2 從編譯器角度理解數組
+3.6.3 從內存角度理解數組
+3.6.4 一位數組中幾個關鍵符號的理解
+3.7 指針與數組的天生「姻緣」
+3.7.1 如何使用指針訪問數組
+3.7.2 從內存角度理解指針訪問數組的實質
+3.7.3 指針與數組類型的匹配問題
+3.7.4 總結：指針類型決定了指針如何參與運算
+3.8 指針類型與強制類型轉換
+3.8.1 變量數據類型的作用
+3.8.2 數據的存入和讀取
+3.8.3 普通變量的強制轉換
+3.8.4 指針變量數據類型的含義
+3.8.5 指針變量數據類型的強制轉換
+3.9 指針、數組與sizeof運算符
+3.9.1 charstr（）=”hello”；sizeof（str），sizeof（str（0）），strlen（str）
+3.9.2 charstr（）=”hello”；char*p=str；sizeof（*p）
+3.9.3 intb（100）；sizeof（b）
+3.9.4 數組的傳參
+3.9.5 #define和typedef的區別
+3.10 指針與函數傳參
+3.10.1 普通傳參
+3.10.2 傳遞地址（指針）
+3.10.3 傳遞數組
+3.10.4 傳遞結構體
+3.10.5 傳遞普通值和傳遞地址的異同，以及傳遞地址（指針）應該遵循的原則
+3.11 輸入型參數與輸出型參數
+3.11.1 函數為什麼需要傳參和返回值
+3.11.2 函數傳參中為什麼使用const指針
+3.11.3 總結
+課后題
+第4章C語言復雜表達式與指針高級應用
+4.1 引言
+4.2 指針數組與數組指針
+4.2.1 簡單理解指針數組與數組指針
+4.2.2 分析指針數組與數組指針的表達式
+4.3 函數指針與typedef
+4.3.1 函數指針的實質（還是指針變量）
+4.3.2 函數指針的書寫和分析方法
+4.3.3 typedef關鍵字的用法
+4.4 函數指針實戰1—用函數指針調用執行函數
+4.5 函數指針實戰2—結構體內嵌函數指針實現分層
+4.6 再論typedef
+4.6.1 輕松理解和應用typedef
+4.6.2 typedef與#define宏的區別
+4.6.3 typedef與struct
+4.6.4 typedef與const
+4.6.5 使用typedef的重要意義
+4.6.6 二重指針
+4.7 二維數組
+4.7.1 二維數組的內存映像
+4.7.2 識別第一維和第二維
+4.7.3 數組名代表數組首元素的地址
+4.7.4 指針訪問二維數組的兩種方式
+4.7.5 總結
+課后題
+第5 章數組&字符串&結構體&共用體&枚舉
+5.1 引言
+5.2 程序中的內存從哪里來
+5.2.1 三種內存來源：棧（stack）、堆（heap）、數據區（.data）
+5.2.2 棧內存特點詳解
+5.3 堆
+5.3.1 堆內存特點詳解
+5.3.2 使用堆內存注意事項
+5.3.3 malloc的一些細節表現
+5.4 內存中的各個段
+5.4.1 代碼段、數據段、bss段
+5.4.2 特殊數據會被放到代碼段
+5.4.3未初始化或顯式初始化為0的全局變量放在bss段
+5.4.4 內存管理方式的總結
+5.5 C語言的字符串類型
+5.5.1 C語言使用指針來管理字符串
+5.5.2 C語言中字符串的本質：指向字符串的存放空間的指針
+5.5.3 指向字符串的指針變量空間和字符串存放的空間是分開的
+5.5.4 存儲多個字符的兩種方式—字符串和字符數組
+5.6 字符串和字符數組的細節
+5.6.1 字符數組的初始化、sizeof以及strlen
+5.6.2 字符串的初始化與sizeof、strlen
+5.6.3 字符數組與字符串的本質差異
+5.7 結構體概述
+5.7.1 結構體使用時先定義結構體類型，再用類型定義變量
+5.7.2 從數組到結構體的進步之處
+5.7.3 結構體變量中的元素如何訪問
+5.8 結構體的對齊訪問
+5.8.1 結構體對齊訪問實例
+5.8.2 結構體為何要對齊訪問
+5.8.3 結構體對齊的規則和運算
+5.8.4 手動對齊
+5.8.5 GCC推薦的對齊指令：_attribute_（（packed））和_attribute_（（aligned（n）））
+5.9 offsetof宏與container_of宏
+5.9.1 由結構體指針進而訪問各元素的原理
+5.9.2 offsetof宏
+5.9.3 container_of宏
+5.9.4 學習指南和要求
+5.10 共用體（union）
+5.10.1 共用體的類型聲明、變量定義和使用
+5.10.2 共用體和結構體的區別
+5.10.3 共用體的主要用途
+5.11 大小端模式
+5.11.1 什麼是大小端模式
+5.11.2 用union來測試機器的大小端模式
+5.11.3 用指針方式來測試機器的大小端
+5.11.4 通信系統中的大小端（數組的大小端）
+5.12 枚舉enum
+5.12.1 枚舉的作用是什麼
+5.12.2 C語言為何需要枚舉
+5.12.3宏定義和枚舉的區別
+5.12.4 枚舉的定義形式
+課后題
+第6 章C語言的預處理、函數和函數庫
+6.1 引言
+6.2 C語言為什麼需要編譯鏈接
+6.2.1 編譯鏈接的流程
+6.2.2 編譯鏈接中各種文件擴展名的含義
+6.3 預處理詳解
+6.3.1 C語言預處理的意義
+6.3.2 預處理涉及的內容
+6.3.3 使用GCC進行編譯和鏈接的過程
+6.4 常見的預處理詳解
+6.4.1 文件包含
+6.4.2 注釋
+6.4.3 宏定義
+6.4.4 條件編譯
+6.5 函數的本質
+6.5.1 C語言為什麼會有函數
+6.5.2 函數書寫的一般原則
+6.5.3 函數是動詞、變量是名詞（面向對象中分別叫方法和成員變量）
+6.5.4 函數的實質是數據處理器
+6.6 函數的基本使用
+6.6.1 函數三要素：定義、聲明、調用
+6.6.2 函數原型和作用
+6.7 遞歸函數
+6.7.1 函數的調用機制
+6.7.2 遞歸函數
+6.7.3 使用遞歸的原則：收斂性、棧溢出
+6.7.4 遞歸與循環的區別
+6.8 庫函數
+6.8.1 什麼是函數庫
+6.8.2 函數庫的由來
+6.8.3 函數庫的提供形式：靜態鏈接庫與動態鏈接庫
+6.8.4 庫函數的使用
+6.9 常見的庫函數之字符串函數
+6.9.1 什麼是字符串
+6.9.2字符串處理函數
+6.9.3 man手冊的引入
+6.9.4 man手冊的使用
+6.9.5 常用的字符串處理函數
+6.10 常見的庫函數之數學庫函數
+6.10.1 數學庫函數
+6.10.2 計算開平方
+6.10.3 鏈接時加—lm
+6.11 制作靜態鏈接庫並使用
+6.12 制作動態鏈接庫並使用
+課后題
+第7 章存儲類&作用域&生命周期&鏈接屬性
+7.1 引言
+7.2 概念解析
+7.2.1 存儲類
+7.2.2 作用域
+7.2.3 生命周期
+7.2.4 鏈接屬性
+7.3 Linux下C程序的內存映像
+7.3.1 代碼段、rodata段（只讀數據段）
+7.3.2 數據段、bss段
+7.3.3 堆
+7.3.4 文件映射區
+7.3.5 棧
+7.3.6 內核映射區
+7.3.7 操作系統下和裸機下C程序加載執行的差異
+7.4 存儲類相關的關鍵字1
+7.4.1 auto
+7.4.2 static
+7.4.3 register
+7.5 存儲類相關的關鍵字2
+7.5.1 extern
+7.5.2 volatile
+7.5.3 restrict
+7.5.4 typedef
+7.6 作用域詳解
+7.6.1 局部變量的代碼塊作用域
+7.6.2函數名和全局變量的文件作用域
+7.7 變量的生命周期
+7.7.1 研究變量生命周期的意義
+7.7.2 棧變量的生命周期
+7.7.3 堆變量的生命周期
+7.7.4 數據段、bss段變量的生命周期
+7.7.5 代碼段、只讀段的生命周期
+7.8 鏈接屬性
+7.8.1 C語言程序的組織架構：多個C文件+多個h文件
+7.8.2 編譯以文件為單位、鏈接以工程為單位
+7.8.3 三種鏈接屬性：外連接、內鏈接、無鏈接
+7.8.4 函數和全局變量的命名沖突問題
+7.8.5 static的第二種用法：修飾全局變量和函數
+課后題
+第8 章C語言關鍵細節討論
+8.1 引言
+8.2 操作系統概述
+8.2.1 什麼是操作系統
+8.2.2 C庫函數
+8.2.3 操作系統的重大意義
+8.3 main函數返回值
+8.3.1 普通函數的返回值
+8.3.2 main函數的返回值
+8.3.3 誰調用了main函數
+8.4 argc、argv與main函數的傳參
+8.5 void類型的本質
+8.6 C語言中的NULL
+8.6.1 NULL的定義
+8.6.2 ’’’’、’’0’’、0和NULL的區別
+8.7 運算中的臨時匿名變量
+8.7.1 C語言和匯編語言的區別
+8.7.2 強制類型轉換
+8.7.3 使用臨時變量來理解不同數據類型之間的運算
+8.8 順序結構
+8.8.1 C語言中的結構
+8.8.2 編譯過程中的順序結構
+8.8.3 思考：為什麼本質都是順序結構
+8.9程序調試
+8.9.1 程序調試手段
+8.9.2 調試（DEBUG）版本和發行（RELEASE）版本的區別
+8.9.3 debug宏的使用方法
+課后題
+第9 章鏈表&狀態機&多線程
+9.1 引言
+9.2 鏈表的引入
+9.2.1 數組的缺陷
+9.2.2 鏈表是什麼樣子的
+9.2.3 鏈表的作用是什麼
+9.3 單鏈表的實現之構建第一個節點
+9.3.1 不實用卻意義重大的簡單鏈表
+9.3.2 從簡單的鏈表開始
+9.3.3 單鏈表的節點構成
+9.3.4 使用堆內存創建一個節點
+9.3.5 鏈表的頭指針
+9.3.6 構建第一個簡單的鏈表
+9.4 單鏈表的實現之從尾部插入節點
+9.4.1 從尾部插入節點
+9.4.2 構建第一個簡單的鏈表
+9.4.3 什麼是頭節點
+9.5 單鏈表的算法之從頭部插入節點
+9.5.1 鏈表頭部插入思路解析
+9.5.2 箭頭非指向
+9.6 單鏈表的算法之遍歷節點
+9.6.1 什麼是遍歷
+9.6.2 如何遍歷單鏈表
+9.6.3 代碼分析
+9.7 單鏈表的算法之刪除節點
+9.7.1 為什麼要刪除節點
+9.7.2 注意堆內存的釋放
+9.7.3 設計一個刪除節點算法
+9.8 單鏈表的算法之逆序
+9.8.1 什麼是鏈表的逆序
+9.8.2 單鏈表的逆序算法分析
+9.8.3 編程實現逆序算法
+9.8.4 數據結構與算法的關系
+9.9 雙鏈表的引入和基本實現
+9.9.1 單鏈表的優缺點
+9.9.2 雙鏈表的結構
+9.10 雙鏈表的算法之插入節點
+9.10.1 尾部插入
+9.10.2 頭部插入
+9.11 雙鏈表的算法之遍歷
+9.11.1 正向遍歷
+9.11.2 逆向遍歷
+9.12 雙鏈表的算法之刪除節點
+9.13 Linux內核鏈表
+9.13.1 前述鏈表數據區域的局限性
+9.13.2 解決思路：數據區的結構體的封裝由用戶實現，通用部分通過調用函數實現
+9.13.3 內核鏈表的設計思路
+9.13.4 list.h文件簡介
+9.14 內核鏈表的基本算法和使用簡介
+9.14.1 內核鏈表的常用操作
+9.14.2 內核鏈表的使用實踐
+9.15 什麼是狀態機
+9.15.1 有限狀態機
+9.15.2 兩種狀態機：Moore型和Mealy型
+9.15.3 狀態機的主要用途
+9.15.4 狀態機解決了什麼問題
+9.16 用C語言實現簡單的狀態機
+9.16.1 題目：開鎖狀態機
+9.16.2 題目分析
+9.17 多線程簡介
+9.17.1 操作系統下的並行執行機制
+9.17.2 進程和線程的區別和聯系
+9.17.3 多線程的優勢
+課后題
+第10 章程序員和編譯器的曖昧
+10.1 引言
+10.2 編程工作的演進史
+10.2.1 CPU與二進制
+10.2.2 編程語言的革命
+10.3程序員、編譯器和CPU之間的三角戀
+10.3.1 程序員與CPU的之間的「翻譯」—編譯器
+10.3.2 高級語言與低級語言的差別
+10.4 像編譯器一樣思考吧—理論篇
+10.4.1 編譯器的結構
+10.4.2 語法是什麼？語法就是編譯器的習性
+10.5 像編譯器一樣思考吧—實戰篇
+10.5.1 充分地利用語法規則，寫出簡潔、高效的代碼
+10.5.2 復雜表達式理解
+課后題
+附錄 答案
+第1章 課后題答案
+第2章 課后題答案
+第3章 課后題答案
+第4章 課后題答案
+第5章 課后題答案
+第6章 課后題答案
+第7章 課后題答案
+第8章 課后題答案
+第9章 課后題答案
+第10章 課后題答案

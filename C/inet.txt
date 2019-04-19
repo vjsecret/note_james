@@ -1,0 +1,63 @@
+inet_aton(): http://roclinux.cn/?p=1160 get
+inet_ntoa()
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <arpa/inet.h>
+
+typedef unsigned int u_int32t;
+typedef u_int32t in_addr_t;
+//typedef u_int in_addr_t;
+
+int main()
+{
+struct in_addr ipAddr;
+char buf[256] = {0};
+in_addr_t buf_wirelessCMStatusWANIPAddr = 0;
+char * IPAddress=NULL;
+IPAddress="192.168.1.1";
+strncpy(buf, IPAddress,strlen(IPAddress) );
+//printf("IPAddress=%s\n", IPAddress);
+//printf("buf=%s\n", buf);
+if( inet_pton(AF_INET, IPAddress, &ipAddr ) !=0)
+{
+  memcpy(&buf_wirelessCMStatusWANIPAddr, &ipAddr, sizeof(struct in_addr));
+}
+else
+{
+  strncpy(buf, "0.0.0.0", sizeof(buf));
+  buf_wirelessCMStatusWANIPAddr = 0;
+}
+printf("buf=%s\n", buf);
+printf("buf_wirelessCMStatusWANIPAddr=%d\n", buf_wirelessCMStatusWANIPAddr);
+//=================================*
+  printf("Hello world!\n");
+  return 0;
+}
+
+sinx的泰勒展開式
+
+各位大大有誰會用for迴圈來編寫sinx的泰勒展開式
+
+double sin(double x) {
+
+    double ret = 0, factorial = 1, pow = x;
+
+    for (char i = 1; i < 12; ++i, factorial *= i, pow *= x) {
+
+        if (1 == (i & 0x03)) {
+
+            ret += pow / factorial;
+
+        } else if (1 == (i & 0x01)) {
+
+            ret -= pow / factorial;
+
+        }
+
+    }
+
+    return ret;
+
+}

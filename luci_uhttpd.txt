@@ -1,0 +1,671 @@
+luci theme material是什麼/如何執行LUCI
+
+
+https://blog.csdn.net/lvshaorong/article/details/53939138
+os.excute("shell命令")
+
+https://stackoverflow.com/questions/9676113/lua-os-execute-return-value 
+
+
+
+./build_dir/target-arm-linux-gnueabihf/root-brcmstb-3.14rg/usr/lib/libzebra.so.0
+
+job那邊有寫一些其他的東西
+
+rg\reference\openwrt\local\feeds\luci\modules\luci-mod-admin-full\luasrc\model\cbi\admin_system\admin.lua
+
+/usr/lib/lua/luci/controller/admin
+
+cgi: uh_ubus_plugin_init=>for rpcd used-example request jason(openwrt ubusd plugin): http://goodspeedlee.blogspot.tw/2017/01/linkit-7688-rpcd.html 
+uh_handler_add: load handler script
+
+
+
+/usr/lib/lua/luci/controller/admin
+
+[3390:RG]# find . -iname dhcp.lua
+./usr/lib/lua/luci/model/cbi/admin_network/dhcp.lua
+
+cbi              dispatcher.lua   model            template.lua
+cbi.lua          http             sgi              tools
+ccache.lua       http.lua         store.lua        util.lua
+config.lua       i18n.lua         sys              version.lua
+controller       ip.so            sys.lua          view
+*path of configfile for Broad: https://pondof.fish/d/33 
+
+/openwrt/rg/reference/openwrt/local/feeds/luci/contrib/uci/hostfiles/etc/config
+
+
+
+
+/etc/config
+./usr/share/libiwinfo/hardware.txt
+
+https://wiki.openwrt.org/doc/devel/config-scripting 
+
+"$(realpath host)/usr/sbin/uhttpd -p 8080 -h $(realpath host)/www -f" =>( find . -iname '*.[Mmb]*' | xargs grep -n "/usr/sbin/uhttpd")
+
+
+5058 ?        S      0:00 /usr/sbin/uhttpd -f -h /www -r OpenWrt -x /cgi-bin -u /ubus -t 60 -T 30 -k 20 -A 1 -n 3 -N 100 -R -p 0.0.0.0:80 -p [::]:80
+
+[3390:RG]# cd /etc/
+[3390:RG]# find . | xargs grep "uhttpd"
+=>
+/etc/rc.d/S50uhttpd
+
+Fri Apr 27 11:50:58 2018 daemon.err uhttpd[7033]: LineNumber:561 switch pid=7034 freddd
+Fri Apr 27 11:50:58 2018 daemon.err uhttpd[7033]: LineNumber:561 switch pid=0 freddd
+
+[3390:RG]# ps aux | grep uhttp
+root      7034  0.0  0.0   2192   344 ?        S    11:50   0:00 /usr/sbin/uhttpd -h /www -r OpenWrt -x /cgi-bin -u /ubus -t 60 -T 30 -k 20 -A 1 -n 3 -N 100 -R -p 0.0.0.0:80 -p [::]:80
+root      7219  0.0  0.0   2340   380 ttyS0    S+   11:51   0:00 grep uhttp
+
+
+
+http://www.cnblogs.com/zmkeil/archive/2013/05/14/3078766.html
+
+http://www.cnblogs.com/wzw200/p/4140744.html
+http://www.openwrt.pro/post-314.html
+http://www.voidcn.com/article/p-wacdilzr-bcc.html
+
+http://blog.chinaunix.net/uid-29616823-id-4578513.html
+
+http://www.openwrt.pro/post-411.html
+https://www.cnblogs.com/guazi/p/6423577.html uhttpd+php+sqlite
+
+
+
+LUCI简单说明教程-用過mongoose（最小巧）、lighttpd(功能最完善)、thttpd： https://wenku.baidu.com/view/7cfb0d17e518964bcf847c76.html 
+
+luci 这个 openwrt上的默认 web 系统，是一个独立的由严谨的德国人开发的 web 框架，是 Lua  Con ﬁ guration Interface 的简称: https://blog.csdn.net/initphp/article/details/17527639 
+
+LuCI 要点，在uHTTPd上安装LuCI： https://wiki.openwrt.org/zh-cn/doc/howto/luci.essentials, https://datahunter.org/openwrt 
+
+*Luci流程分析（openwrt下）: http://www.cnblogs.com/x_wukong/p/4515357.html 
+转自： http://blog.chinaunix.net/uid-23780428-id-4367414.html 
+luci.dispatcher.indexcache = "/tmp/luci-indexcache"--缓存文件位置“/tmp/luci-indexcache”
+luci.sgi.cgi.run()--cgi程序接下来执行程序，Luci的默认路径是/usr/lib/lua/luci，所以luci.sgi.cgi.run()是运行/usr/lib/lua/luci/sgi/cgi.lua文件中的run函数。
+
+*openWRT学习之LUCI之二访问model下lua文件实现简单的显示文本内容: https://blog.csdn.net/ubuntucc/article/details/41083781
+在model/cbi/admin_system/下编写文件heyg2.lua,内容如下：
+Require “luci.http”
+Luci.http.write(“this is heyg2 test”)
+*Luci:apihttps://htmlpreview.github.io/?https://raw.githubusercontent.com/openwrt/luci/master/documentation/api/modules/luci.http.html
+https://wiki.openwrt.org/doc/techref/uci#api
+CBI models(http://luci.subsignal.org/trac/wiki/Documentation/CBI)
+https://blog.csdn.net/LunaW/article/details/50426595 
+*Entry()函数的一些属性解析：对于插入一个结点，该结点除了有相应的名称和处理动作之外，它还有一些相应的属性，我们可以手动的设置它的属性值类似于entry().dependent=false
+https://blog.csdn.net/ubuntucc/article/details/41083687 
+官方文旦中给出以下属性：
+dependent :当该节点的父节点丢失时，将该节点保护起来，不让它被意外调用
+leaf:如果该节点下还有其他子节点，解析到该结点时，就不向下继续解析其子节点。
+sysauth：在使用该节点时需要一个系统账户验证
+I18n：定义了当求页面请求时，哪些文件会自动加载
+其他属性（纯属自己猜测，如有不正，多多指教，勿喷）：
+Index:将该节点作为同级目录下的作为首页，或者说默认的第一个页面
+可以参考luci官方文旦：
+http://luci.subsignal.org/trac/wiki/Documentation/ModulesHowTo
+https://blog.csdn.net/lvshaorong/article/details/53939138 改樣式
+*Target主要有alise、firstchild、call、cbi、form和template 6種生成方式。總體上可以分成兩類，前兩種主要用於連結其他節點，後四種則是實現函數方法或頁面跳轉[7]。
+https://read01.com/zh-tw/O0E65.html#.WvJVWRcRVQI, https://read01.com/O0E65.html
+連結節點：alias是網頁節點之間的連結。比如，當用戶登錄路由成功後，進入的網頁節點未定義內容，可以用alias的方法，自動連結到有內容的Web節點。
+實現函數方法或頁面跳轉：這種方法一般用於一個路徑的葉節點leaf，執行相應的操作，並且動態生成頁面html文件，傳遞給用戶。在call、cbi、form、template四種方法中，call調用了自定義的功能函數，直接調用以實現特定的目標，如發送數據、讀取文件等。調用cbi函數能夠使用CBI模塊簡潔高效地生成網頁。函數template是直接連結到目錄view下面的htm頁面，實現網頁跳轉。
+[1] 海虎，李濤，韓俊剛，等.多態並行處理器的數據通信和路由器的設計[J].電子技術應用，2014，40（8）：38-40，47.
+[2] 朱雲雷.基於互聯與認證的無線路由器關鍵技術[J].微型機與應用，2014，33（24）：57-58，65．
+[3] 張一弓.基於OpenWrt平台的進程問通信[J].科技創新與應用，2014（21）：62.
+[4] KIM C G， KIM K J. Implementation of a cost-effective home lighting control system on embedded Linux with OpenWrt[J]. Personal & Ubiquitous Computing， 2014， 18（3）：535-542.
+[5] PALAZZI C E， BRUNATI M， ROCCETTI M. An OpenWrt solution for future wireless homes[C]. 2010 IEEE International Conference on Multimedia and Expo， IEEE Computer Society， 2010：1701-1706.
+[6] 吵吵博客．LuCI介面開發之CBI模塊[EB/OL]．（2011-09-04）[2015-06-30]http：//www.chaochaoblog.com/archives/698．
+[7] 吵吵博客．LuCI實現啟動應用程式等腳本命令2011[EB/OL]．（2011-09-03）[2015-06-30]http：//www.chaochaoblog.com/archives/691.
+http://www.cnblogs.com/rohens-hbg/articles/5151821.html luci multilanguage
+
+*procd:
+https://blog.csdn.net/wdsfup/article/details/70770319 
+https://erwinchang.github.io/2017/03/31/procd/#procd-main 
+start_service() 为注册服务到procd中，如果自己的应用程序没有配置文件，只要实现start_service()就好， procd_set_param设置设置好多参数，command为自己的应用路径
+ service_triggers() 如果自己的应用需要关联一个配置文件test，（需要放在/etc/config/目录下），可以跟踪文件的修改情况，如果这个文件有改变，就调用reload_service().在service_triggers也可以添加跟踪网络的修改，也可以同时跟踪多个配置文件
+reload_service() 配置文件改变后，需要调用这个函数，可以根据自己需要实现功能。
+注：start和reload区别是，start一般是指应用程序启动， reload一般是指只是重新加载与配置文件改变相关的部分，不把整个应用程序重新启动。这种方式应该是推荐的，如果你再reload里重新启动应用也是可以的
+
+*Uhttp是基於ubox ubus json-c的，如果加上SSL ，還需要openssl庫
+一般配置文件文件改变是通过MD5值来判断的，/sbin/reload_config,内容如下
+#!/bin/sh
+MD5FILE=/var/run/config.md5
+[ -f $MD5FILE ] && {
+for c in `md5sum -c $MD5FILE 2>/dev/null| grep FAILED | cut -d: -f1`; do
+ubus call service event "{ \"type\": \"config.change\", \"data\": { \"package\": \"$(basename $c)\" }}"
+done
+}
+md5sum /etc/config/* > $MD5FILE
+就是调用procd注册的service event事件， 例如网页修改配置后，会通过rpcd调用/sbin/reload_config
+*OpenWrt配置HTTPS访问LuCI: http://demon.tw/hardware/openwrt-https-luci.html
+一直以来都是通过HTTP远程访问OpenWrt的LuCI管理界面，但是最近电信把80端口给封了，测试了一下443端口没有被封，于是可以启用HTTPS来访问LuCI管理界面。
+OpenWrt默认的HTTP服务器软件是uHTTPd，这里以uHTTPd为例，其他软件请自行查阅文档
+opkg update
+opkg install px5g uhttpd-mod-tls
+/etc/init.d/uhttpd restart
+opkg remove px5g
+//Px5g is a tiny standalone X.509 certificate generator. It's suitable to create key files and certificates in DER and PEM format for use with stunnel, uhttpd and others.  reference: https://wiki.openwrt.org/zh-cn/doc/techref/luci
+
+*search keyword: lua_prefix
+http://blog.sina.com.cn/s/blog_673cc3340102w50q.html  Lua作为CGI脚本在OpenWrt上响应uhttpd的http访问
+uhttpd是OpenWrt上经常使用的、轻量级的响应http申请的web服务器，可以将申请分发给文件、CGI解释器（cgi_prefix，解释器一般为perl或者是php-cgi）或者Lua解释器（lua_prefix）。
+由于使用Lua解释器开发时，由lua_handler指定的.lua文件每次修改都需要重新启动uhttpd才能生效，因此将.lua文件作为CGI脚本来调试会方便很多
+http://yume190.github.io/2016/12/05/OpenWRT-2016-12-05-uhttp-lua/ 
+
+uhttpd是openwrt上默認的Web伺服器，支援CGI，lua腳本，以及靜態檔的服務。main函數進行一些初始化（首先parse config-file，然後parse argv），然後進入一個迴圈，不斷地監聽，每當有一個客戶請求到達時，則對它進行處理。 在uhttpd啟動的時候，它會先讀取參數，進行伺服器的配置。參數可以由命令列輸入，其中port參數必須制定，其他都有預設值。配置完參數之後，伺服器會進入uh_mainloop，等待請求
+
+當檢測到有用戶端請求，uhttpd就會先接受請求，再進行解析url，判斷出是file-request、cgi-request或lua-request，在分發過程（不包括lua請求）當中，會根據path的首碼來判斷是CGI請求還是靜態檔請求(這主要是根據url的最前面的字串（稱為首碼prefix）得出的)，預設的CGI首碼是/cgi-bin。CGI請求進入uh_cgi_request，檔請求進入uh_file_request，lua請求則會進入lua_request
+
+然後就用相應的形式進行處理。之後再調用uh_dispatch_request去分發請求。其中，lua請求比較特殊，不由uh_dispatch_request分發
+在三種handler中，lua_request會調用lua解譯器進行處理，file_request直接讀取檔並且返回，CGI請求比較複雜，之後會詳細說明。在三種request處理之後，都會返回給用戶端。一次迴圈到此結束。
+
+伺服器的埠綁定沒有寫在config裡面，而是直接用uh_socket_bind進行了埠的綁定
+ 
+1url解析
+    由上圖紅色字所示，uh_cgi_request需要兩個二外的參數pathinfo和interpreter，其中pin是一個struct，包含了路徑中各種有用資訊；ipr指明所用的cgi程式，因為一個伺服器中可以有多個cgi程式
+
+
+
+
+
+*[PHP]include 與 require 的差別: require適合用來引入靜態的內容，而include則適合用來引入動態的程式碼 http://syunguo.blogspot.tw/2013/04/phpinclude-require.html
+http://www.360doc.com/content/13/1013/21/3884271_321221373.shtml uhttpd use php (https://www.youtube.com/watch?v=X8N3MW5pxGc)
+
+make package/uhttpd/compile  https://wiki.openwrt.org/doc/howtobuild/single.package 
+OpenWrt patch方法: https://blog.csdn.net/wwx0715/article/details/25160361, https://fjkfwz.github.io/2014/12/04/Openwrt-Patches/ 
+
+
+http://www.fox-saying.com/blog/post/45707235
+https://gorgias.me/2017/02/24/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91OpenWrt%E5%9B%BA%E4%BB%B6%E7%AC%94%E8%AE%B0/ compile openwrt
+iMX6UL之 OpenWRT移植與編譯: http://blog.csdn.net/peixiuhui/article/details/72551679
+uhttpd: http://blog.csdn.net/xushx_bigbear/article/details/48439057, http://blog.csdn.net/wsclinux/article/details/51253235, http://blog.csdn.net/lee244868149/article/details/43015223, http://blog.csdn.net/mcusun2000/article/details/52452045,  https://openwrt.org/zh-cn/doc/howto/http.uhttpd
+
+*OpenWRT Makefile框架以及Kernel和firmware生成過程分析: http://www.cnblogs.com/sammei/p/3968916.html, http://cn.wrtnode.com/w/?p=315, ( http://www.uubook.net/article/detail/110913.html )
+http://www.right.com.cn/forum/thread-73443-1-3.html OpenWrt的主Makefile檔只有100行，可以簡單分為三部分，1~17行為前導部分，19~31為首次執行部分，33~101為再次執行部分。
+前導部分:
+CURDIR為make預設變數，預設值為目前的目錄
+在OpenWrt的主Makefile檔使用了多次include指示符，說明主Makefile檔被拆分成多個檔，被拆分的檔放在不同的目錄。
+在前導部分比較費解的是使用world目標，在OpenWrt的主Makefile檔的第一個目標world沒有依賴和命令。它主要起到指示當make命令不帶目標時所要執行的目標，沒有設定依賴和命令部分表明此目標在此後將會有其他依賴關係或命令。world目標的命令需要進一步參考$(TOPDIR)/include/toplevel.mk和主Makefile檔的再次執行部分
+引入$(TOPDIR)/include/debug.mk、$(TOPDIR)/include/depends.mk、$(TOPDIR)/include/toplevel.mk三個檔，由於TOPDIR是固定的，所以三個檔也是固定的。其中$(TOPDIR)/include/toplevel.mk的135行%::有效解釋首次執行時world目標的規則。
+再次執行部分引入rules.mk、$(INCLUDE_DIR)/depends.mk、$(INCLUDE_DIR)/subdir.mk、target/Makefile、package/Makefile、tools/Makefile、toolchain/Makefile七個文件，rules.mk沒有目錄名，即引入與主Makefile檔目錄相同的rules.mk。在rules.mk定義了INCLUDE_DIR為$(TOPDIR)/include，所以$(INCLUDE_DIR)/depends.mk實際上與首次執行時引入的$(TOPDIR)/include/depends.mk是同一個文件。
+四個子目錄下的Makefile實際上是不能獨立執行。主要利用$(INCLUDE_DIR)/subdir.mk動態建立規則，諸如$(toolchain/stamp-install)目標是靠$(INCLUDE_DIR)/subdir.mk的stampfile函數動態建立。在package/Makefile動態建立了$(package/ stamp-prereq)、$(package/ stamp-cleanup)、$(package/ stamp-compile)、$(package/ stamp-install)、$(package/ stamp-rootfs-prepare)目標。
+
+定義一些使用變數命名的目標，其變數的賦值位置在$(INCLUDE_DIR)/subdir.mk的stampfile函數中。目標只有依賴關係，可能說明其工作順序，在$(INCLUDE_DIR)/subdir.mk的stampfile函數中有進一步說明其目標執行的命令，並為目標建立一個空檔，即使用變數命名的目標為真實的檔
+
+prereq應該是預請求目標，在OpenWrt執行Makefile時好像都要先執行prereq目標。
+        prepare應該是準備目標，是world依賴的一個偽目標。依賴於檔.config和$(tools/stamp-install) $(toolchain/stamp-install)目標。
+        world就是編譯的目標。依賴於prepare為目標和前面提到的變數命名目標。採用取消隱含規則方式執行package/index目標。package/index目標在package/Makefile的92行定義。
+        package/symlinks和package/symlinks-install是更新或安裝套裝軟體來源的目標，使用$(SCRIPT_DIR)/feeds指令檔完成。
+        package/symlinks-clean是清除套裝軟體來源的目標，也是使用$(SCRIPT_DIR)/feeds指令檔完成。
+        最後使用偽目標.PHONY說明clean dirclean prereq prepare world package/symlinks package/symlinks-install package/symlinks-clean屬於偽目標。通過偽目標說明可以知道可以執行的目標。
+ 
+*luci啟動詳細過程:
+http://www.cnblogs.com/zmkeil/archive/2013/05/14/3078766.html
+http://www.cnblogs.com/zmkeil/archive/2013/05/14/3078774.html
+http://blog.csdn.net/qq_21949217/article/details/42192627
+OpenWrt 系統分析: http://www.openwrt.pro/post-117.html
+*OpenWrt啟動過程分析: http://www.openwrt.pro/post-409.html
+OpenWrt 開機流程分析: http://www.openwrt.pro/post-39.html
+
+rg\reference\openwrt\feeds.conf.default
+feeds\luci\modules\luci-base\root
+feeds\luci\contrib\uhttpd\Makefile
+uci show uhttpd: https://wiki.openwrt.org/zh-cn/doc/uci, http://www.cnblogs.com/wzw200/p/4140744.html : ./package/network/services/uhttpd/files/uhttpd.config
+https://wiki.openwrt.org/zh-cn/doc/howto/http.uhttpd, https://wiki.openwrt.org/doc/uci/uhttpd, https://www.jianshu.com/p/bfb93c4e8dc9
+uhttpd config: https://wiki.openwrt.org/doc/uci/uhttpd
+http://lirobo.blogspot.tw/2013/08/openwrt-unified-configuration-interface.html uci-libuci
+http://forgotfun.org/2016/02/%E9%87%8D%E6%96%B0%E5%B0%81%E8%A3%85OpenWRT%E4%B8%8B%E7%9A%84LibUCI%E5%BA%93-%E9%99%8D%E4%BD%8E%E4%BD%BF%E7%94%A8%E9%9A%BE%E5%BA%A6.html 
+http://lxr.mein.io/source/uci/uci.h 
+https://blog.csdn.net/bytxl/article/details/43761573 
+
+example: http://scateu.me/2016/12/03/openwrt-helloworld.html, https://www.ibm.com/developerworks/cn/opensource/os-cn-LUAScript/index.html, ( http://blog.justbilt.com/2017/09/03/serialize-lua-in-pyhton/  )
+keyword:python加lua
+http://www.itread01.com/articles/1475850015.html
+keyword:解析lua
+http://programmermagazine.github.io/201402/htm/article0.html
+
+*Luci介紹: https://github.com/seamustuohy/luci_tutorials(https://segmentfault.com/a/1190000000787650)
+http://blog.csdn.net/fyh2003/article/details/44564219, http://www.liwangmeng.com/openwrt%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%E5%BD%92%E7%BA%B3/(web: https://segmentfault.com/a/1190000013038095, http://wiki.t-firefly.com/index.php/FireWRT/luCI_Write_Modules, http://blog.csdn.net/user_920/article/details/8504979)
+openwrt webui 主流有luci 跟gargoyle 這兩個, 一般常見支援廣泛的是luci(應該可以說有openwrt 就有它的存在), gargoyle 支援機種比較少一點, 但它的介面是我看過最簡潔有力的
+https://read01.com/zh-tw/KB2KyL.html#.WqH_DxcRVQI, http://blog.csdn.net/qq_21949217/article/details/41824343, https://baike.baidu.com/item/Luci/458722, http://www.wifidog.pro/2015/08/11/openwrt-luci%E8%A6%81%E7%82%B9.html
+
+*OpenWrt 目录结构分析: http://www.openwrt.pro/post-126.html
+上图是openwrt的目录结构，第一行是原始目录，第二行是编译过程中生成的目录
+tools – 编译时需要一些工具， tools里包含了获取和编译这些工具的命令。里面是一些Makefile，有的可能还有patch。每个Makefile里都有一句 $(eval $(call HostBuild))，表示编译这个工具是为了在主机上使用的
+toolchain – 包含一些命令去获取kernel headers, C library, bin-utils, compiler, debugger
+include – openwrt的Makefile都存放在这里。
+scripts – 一些perl脚本，用于软件包管理
+target – 各平台在这个目录里定义了firmware和kernel的编译过程。
+package – 包含针对各个软件包的Makefile。openwrt定义了一套Makefile模板，各软件参照这个模板定义了自己的信息，如软件包的版本、下载地址、编译方式、安装地址等。
+bin – 编译完成之后，firmware和各ipk会放到此目录下。
+build_dir – 软件包都解压到build_dir/里，然后在此编译
+staging_dir – 最终安装目录。tools, toolchain被安装到这里，rootfs也会放到这里。
+dl – 软件包下载后都放到这个目录里
+
+*openwrt，ddwrt，tomato这些路由器固件是怎么开发出来的？ https://www.zhihu.com/question/20822589
+Cisco/Linksys 在2003 年发行的WRT54G这款无线路由器,Linux Kernel Mailing List 搜索 WRT54G
+有了源代码以后，开发者便清楚知道代码如何控制路由器的硬件，并且掌握了一些通过增加新的代码到原有的IOS 当中去 —— 使得硬件支持更多的Feature 的技术
+建立了一个DD-WRT 项目的Wiki 站点将全套文档以及代码公开发布。使用DD-WRT 项目提供的源代码，重新升级WRT54G 以后你就能够获得一台相当于$600 左右的中端无线路由器了
+http://blog.csdn.net/sinat_36184075/article/details/72231970
+(
+智能路由器開發指南: http://www.books.com.tw/products/CN11378903
+按照認識路由器的順序進行編寫，介紹了智能路由器、開發環境及編譯分析、OpenWrt包管理系統、OpenWrt配置、軟件開發、GDB調試、網絡基礎知識、路由器基礎軟件模塊、常用軟件模塊、IP路由、DNS與DHCP、iptables防火牆、UCI防火牆、UPnP、網絡測試及分析工具等。https://world.taobao.com/item/556162230378.htm
+)
+*openwrt上安裝luci:http://www.cnblogs.com/x_wukong/p/4505240.html, https://ithelp.ithome.com.tw/articles/10156559
+https://forum.openwrt.org/viewtopic.php?id=65111
+I have downloaded luci:
+git clone https://github.com/openwrt/luci.git
+git checkout luci-0.12
+
+There is a Makefile in /home/tom/Downloads/luci/contrib/uhttpd
+
+With a call to svn to collect the httpd source files
+UHTTPD_SRC = svn://svn.openwrt.org/openwrt/branches/backfire/package/uhttpd/src
+UHTTPD_DIR = uhttpd-src
+UHTTPD_PATCHDIR = patches
+$(UHTTPD_DIR)/Makefile:
+  svn co $(UHTTPD_SRC) $(UHTTPD_DIR)
+
+uhttpd sources are in:
+http://git.openwrt.org/?p=project/uhttpd.git;a=summary
+
+That is defined in the uhttpd package Makefile:
+http://git.openwrt.org/?p=openwrt.git;a … a3;hb=HEAD
+
+
+uhttpd源码分析: http://www.cnblogs.com/wzw200/p/4140744.html, http://www.voidcn.com/article/p-wacdilzr-bcc.html, http://blog.csdn.net/jameslord/article/details/6316703, http://blog.csdn.net/xushx_bigbear/article/details/48439057, http://blog.chinaunix.net/uid-29616823-id-4578513.html 
+
+*uhttpd 代码分析: http://www.openwrt.pro/post-411.html, http://www.openwrt.pro/post-314.html OpenWrt的web服务器 uhttpd: http://www.openwrt.pro/post-406.html
+http://www.voidcn.com/article/p-tsdyaadp-ka.html, https://ddnews.me/world/26xqelc5.html
+luci\modules\base\htdocs\cgi-bin\luci
+#!/usr/bin/lua -- 执行命令的路径
+require"luci.cacheloader" -- 导入 cacheloader 包
+require"luci.sgi.cgi" -- 导入 sgi.cgi 包
+luci.dispatcher.indexcache = "/tmp/luci-indexcache" --cache 缓存路径地址
+luci.sgi.cgi.run() -- 执 行 run 方法，此方法位于 luci\modules\base\luasrc\sgi\cgi.lua 中
+
+run方法 luci\modules\base\luasrc\sgi\cgi.lua
+function run()
+local r = luci.http.Request(
+luci.sys.getenv(),
+limitsource(io.stdin, tonumber(luci.sys.getenv("CONTENT_LENGTH"))),
+ltn12.sink.file(io.stderr)
+)
+
+local x = coroutine.create(luci.dispatcher.httpdispatch) //开启协助线程---->调用luci\modules\base\luasrc\dispatcher.lua里的httpdispatch函数
+local hcache = ""
+local active = true
+while coroutine.status(x) ~= "dead" do
+local res, id, data1, data2 = coroutine.resume(x, r)
+
+if not res then
+print("Status: 500 Internal Server Error")
+print("Content-Type: text/plain\n")
+print(id)
+break;
+end
+
+if active then
+if id == 1 then
+io.write("Status: " .. tostring(data1) .. " " .. data2 .. "\r\n")
+elseif id == 2 then
+hcache = hcache .. data1 .. ": " .. data2 .. "\r\n"
+elseif id == 3 then
+io.write(hcache)
+io.write("\r\n")
+elseif id == 4 then
+io.write(tostring(data1 or ""))
+elseif id == 5 then
+io.flush()
+io.close()
+active = false
+elseif id == 6 then
+data1:copyz(nixio.stdout, data2)
+data1:close()
+end
+end
+end
+end
+
+2，进入网页(進入主菜單‘status)
+在浏览器中输入：http://192.168.1.1/ 会自动跳到http://192.168.1.1/cgi-bin/luci 登陆默认root 密码是空，默认的几个一级菜单都是在modules\admin-full\luasrc\controller\admin\ 这个目录下，index.lua为执行文件
+module("luci.controller.admin.index", package.seeall) //声明一下这个模块, 模块入口为函数
+
+function index()
+local root = node() //定义了最外面的节点，也就是最上层的菜单显示
+if not root.target then
+root.target = alias("admin")
+root.index = true
+end
+
+local page = node("admin")
+page.target = firstchild() //----->luci\modules\base\luasrc\dispatcher.lua--->firstchild()
+page.title = _("Administration")
+page.order = 10
+page.sysauth = "root"
+page.sysauth_authenticator = "htmlauth" //---->luci\modules\base\luasrc\dispatcher.lua---->htmlauth() 找到哪个用户
+  page.ucidata = true
+page.index = true
+
+-- Empty services menu to be populated by addons
+entry({"admin", "services"}, firstchild(), _("Services"), 40).index = true
+
+entry({"admin", "logout"}, call("action_logout"), _("Logout"), 90)
+end
+
+entry 定义了菜单下的一个子菜单
+entry(路径, 调用目标, _("显示名称"), 显示顺序)
+entry(path, target, title=nil, order=nil)
+第1项为菜单入口；
+第2项为菜单对应的页面，可以是lua的源代码文件，也可以是html页面，甚至可以是以上两种页面的组合。（alias是指向别的entry的别名，from调用的某一个view，cbi调用某一个model，call直接调用函数）
+第3项是菜单的文本，直接添加string不会国际化，_("string"),就国际化了
+第4项是同级菜单下，此菜单项的位置，从大到小。
+
+
+3,登陆
+目录：luci\modules\base\luasrc\dispatcher.lua
+function authenticator.htmlauth(validator, accs, default)
+local user = luci.http.formvalue("username")
+local pass = luci.http.formvalue("password")
+
+if user and validator(user, pass) then
+return user
+end
+
+require("luci.i18n")
+require("luci.template")
+context.path = {}
+luci.template.render("sysauth", {duser=default, fuser=user})
+return false
+
+end
+
+4.子菜单项
+function _firstchild()
+  local path = { unpack(context.path) }
+  local name = table.concat(path, ".") //当前目录下,既：luci\modules\admin-full\luasrc\controller\admin\
+  local node = context.treecache[name]
+
+  local lowest
+  if node and node.nodes and next(node.nodes) then
+local k, v
+for k, v in pairs(node.nodes) do
+if not lowest or
+(v.order or 100) < (node.nodes[lowest].order or 100)
+then
+lowest = k
+end
+end
+  end
+
+  assert(lowest ~= nil,
+"The requested node contains no childs, unable to redispatch")
+
+  path[#path+1] = lowest
+  dispatch(path)
+end
+
+--- Alias the first (lowest order) page automatically
+function firstchild()
+  return { type = "firstchild", target = _firstchild }
+end
+
+既：
+entry({"admin", "services"}, ｛"firstchild","network.lua system.lua ......"｝, _("Services"), 40).index = true
+如上可以看出，登陆后第一级目录如下：luci\modules\admin-full\luasrc\controller\admin\下的xxx.lua文件
+
+*openwrt 中 uhttpd 自动跳转到 /cgi-bin/luci: https://my.oschina.net/hevakelcj/blog/407017?p=%7B%7BtotalPage%7D%7D
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="refresh" content="0; URL=/cgi-bin/luci" />
+</head>
+<body style="background-color: black">
+<a style="color: white; text-decoration: none" href="/cgi-bin/luci">LuCI - Lua Configuration Interface</a>
+</body>
+</html>
+OpenWRT系统的网页配置分析与界面开发:潘楚文 广东海洋大学 信息学院 电气工程及其自动化 1112班: https://wenku.baidu.com/view/f421d7d9a8114431b90dd8f4.html (
+/cig-bin/luci是LuCI默认的CGI入口，/cig-bin/是由uHTTPd配置文件/etc/config/uhttpd中的cgi_prefix变量决定)
+
+http://blog.csdn.net/jasonzeng/article/details/53536753
+/www目录下放的除了index.htm和cgi-bin/luci脚本以外,还存放着,导航栏header.htm和footer.htm还有一些css文件,javascript文件,icons,gif等图片.我们可以对/usr/lib/lua/luci/view下面的htm模板进行删改,但是如果要改样式就可以从/www下的css文件进行样式修改
+
+luci的index.htm在/www/下面<meta http-equiv="refresh" content="0; URL=/cgi-bin/luci" />
+这是定向到/www/cgi-bin/luci脚本,这个脚本就开始调用其他文件的lua脚本去生产我们所看到的页面
+
+module("luci.controller.admin.network", package.seeall) //这个是必须要有的,说明了你的lua脚本是在哪里,它生成页面时,是需要检查你这句话先的.然后
+Function index()
+Entry({“admin”, “network”, “h3c”}, cbi(“h3c”), _(title), order)
+End
+这里就写了,我们要在admin(一整个网页)下面的network列表下面添加一个h3c的页面.然后网页上面显示的标题,还有order顺序.这个顺序是network这个列表下面的顺序,如果把”network”删掉,这时候,h3c就出现在一级目录,这时候的顺序就是在一级目录的顺序.
+而cbi的意思是调用/usr/lib/lua/luci/model/cbi/下面的lua脚本
+Call()就是调用下面定义好的函数
+Template()就是调用/usr/lib/lua/luci/view/下面的htm文件,但要参考其他的entry函数去修改路径.
+
+以njit client的例子来说明如何修改页面,我们看看model/下面的h3c.lua
+require("luci.sys")
+
+m = Map("h3c", translate("校园网认证"), translate("请输入你的校园网帐号和密码."))
+
+s = m:section(TypedSection, "login", "")
+s.addremove = false
+s.anonymous = true
+
+name = s:option(Value, "username", translate("Username"))
+pass = s:option(Value, "password", translate("Password"))
+pass.password = true
+
+local apply = luci.http.formvalue("cbi.apply")
+if apply then
+  io.popen("sh /etc/init.d/njitclient")
+end
+
+return m
+第一句还是要有的,因为lua语言的引用就是require(“xxx”),所以第一句话就是说包含luci/sys.lua
+第二句,就是你要修改/etc/config/h3c这个文件,然后页面的h2标题是校园网认证,其实写英文也可以,不过就要在po/zh-cn添加一个翻译.不过我们一开始就弄了个默认中文页面,但是最好一开始修改还是使用英文页面,因为没有翻译过的页面可以让你更快的找到你想要的代码.
+然后就是说明你要修改哪个section.
+config login
+  option username 'root'
+  option password 'admin'
+Openwrt下面的config文件的格式是这样的,
+但还有的是这样的
+config login h3c
+  option username 'root'
+  option password 'admin'
+这两个有什么区别呢?区别在于s = m:section(TypedSection, "login", "")
+这一句怎么写,如果是第一个section,就要用TypedSection.这就是告诉系统,你要根据type去找一个叫login的section,然后再来一个说明””,这个说明是出现在luci界面上面的.但是在config下面
+Network这个config文件它里面的section是这样的
+Config interface wan
+Option ipadder “”
+
+Config interface lan
+Option dns “”
+很明显,如果你还是用typesection,系统就会找到两个section,这样luci上面就会出现2个或多个输入框.这时候我们需要使用的是NamedSection
+s = m:section(NamedSection, "wan", "")
+来选择wan这个section
+name = s:option(Value, "username", translate("Username"))
+pass = s:option(Value, "password", translate("Password"))
+pass.password = true
+然后这两句就是选择对应的option进行修改,但是要把密码变成*******
+local apply = luci.http.formvalue("cbi.apply")
+if apply then
+  io.popen("sh /etc/init.d/njitclient")
+end
+然后如果按啦应用保存,就触发/etc/init.d/njitclient这个脚本,这个脚本用于启动njitclient这个程序.
+最后返回m,显示整个页面.
+
+
+*luci接口说明: https://blog.csdn.net/wsclinux/article/details/51262083
+3. LUCI的基本架构 
+LUCI可以归属为web开发行列。它的基本架构跟很多WEB开发语言的框架一样，都是MVC架构。
+M(Model): 模型层，路径是/usr/lib/lua/luci/model/。这个是数据处理的具体代码的层。该层中有一个cbi文件夹，那里面是预定义的一些的逻辑文件。
+V（View）: 视图层，路径是/usr/lib/lua/luci/view/。这个很容易理解，就是存放视图文件的地方。LUCI里的视图文件是.htm文件。
+C（Controller）: 控制层，路径是/usr/lib/lua/luci/controller/admin/。这个层最主要的功能是设定路由；它还有一个功能跟模型层一致——处理数据。
+根目录: /usr/lib/lua/luci
+资源文件存放目录: /www/luci-static/
+4. 开始建立新页面
+http://blog.csdn.net/u013131156/article/details/45824203, (web: https://segmentfault.com/a/1190000013038095, http://wiki.t-firefly.com/index.php/FireWRT/luCI_Write_Modules, http://blog.csdn.net/user_920/article/details/8504979)
+
+以配置network文件为例，实现一个testnet模块需要完成下面的步骤。
+步骤：
+
+    建立一个配置文件
+    定义控制层
+    定义模型层
+
+LUCI是用于存取配置文件的信息，所以我们的若要新建一个模块，需要一个配置文件。配置文件的路径一般是在/etc/config/。
+
+module("luci.controller.控制器名/路径", package.seeall)
+function index()
+        entry(路径, 调用目标, _("显示名称"), 显示顺序)
+        end
+entry表示添加一个新的模块入口，官方给出了entry的定义，其中后两项都是可以为空的：
+entry(path, target, title=nil, order=nil)
+path：如果这样写{“click”, “here”, “now”}，那么就可以在浏览器里访问“http://192.168.x.1/cgi-bin/luci/click/here/now”来访问这个脚本。我们也可以根据需要按如下方式编写{“admin”, “一级菜单名”, “菜单项名”}，系统会自动在对应的菜单中生成菜单项。比如想在“网络”菜单下创建一个菜单项，那么一级菜单名可以写为“network”。
+target：
+调用目标分为三种，分别是执行指定方法Action、访问指定页面Views以及调用CBI Module
+    第一种可以直接调用指定的函数，比如点击菜单项就直接重启路由器等等，比如写为call(“function_name”)，然后在lua文件下编写名为function_name的函数就可以调用了。
+    第二种可以访问指定的页面，比如写为template(“myapp/mymodule”)就可以调用/usr/lib/lua/luci/view/myapp/mymodule.htm文件了
+    而如果要编写配置页面，那么使用第三种方法无非是最方便的，比如写为cbi(“myapp/mymodule”)就可以调用/usr/lib/lua/luci/model/cbi/myapp/mymodule.lua文件了。
+(动态生成界面的方法有两种，一是通过cbi()/form()方法，它们利用model中定义的模板map，生成html文件；另一种是通过template()方法，利用view中定义的htm（一种类似html的文件），直接生成界面。)
+
+/usr/lib/lua/luci/controller/njitclient.lua
+module("luci.controller.njitclient", package.seeall)
+function index()
+        entry({"admin", "network", "njitclient"}, cbi("njitclient"), _("NJIT Client"), 100)
+        end
+
+/usr/lib/lua/luci/model/cbi/njitclient.lua
+m = Map("njitclient", translate("NJIT Client"), translate("Configure NJIT 802.11x client."))
+m = Map("配置文件文件名", "配置頁面標題", "配置頁面說明")
+m = Map("network", translate("Test Net"))
+s = m:section(NamedSection, "testnets", "interface", translate("Net Configuration")
+（2）
+ifname = s:option(Value, "ifname", translate("Ifname: "))
+ifname.datatype = 'string'
+
+itype = s:option(Value, "type", translate("Type: "))
+itype.datatype = 'string'
+
+ipaddr = s:option(Value, "ipaddr", translate("Ipaddr: "))
+ipaddr.datatype = 'ipaddr'
+
+net = s:option(Value, "net", translate("Net:"))
+net.datatype = 'ipaddr'
+return m
+
+cbi:section("network", "interface", "testnets", {
+        ifname = ifname,
+        type = in_type,
+        ipaddr = in_ipaddr,
+        net = in_net
+    }
+第一个参数是config文件的文件名，第二个参数是section的type名，第三个参数是section的name名（若是没有，可为空），第四个参数是具体的配置项内容
+
+http://bbs.carystudio.com/forum.php?mod=viewthread&tid=201
+LuCI 页面修改
+简单的文件配置，路由上路径主要是/usr/lib/lua/luci/下子目录：/controller/ 、 /model/cbi/ 、 /view/，或者根目录下的/www/中.可以在路上修改查看效果.
+如果想要编译自定义LuCI页面的固件，请尝试修改如下OpenWRT源码结构路径内的LuCI文件.
+xxx/package/feeds/luci/luci/luci/libs/web/root/etc/config/luci --- AA 版本pakages/feeds/luci/中xxx\feeds\luci\luci\luci\libs\web\root\etc\config\luci --- AA 版本的feeds/luci文件夹中xxx/feeds/luci/modules/base/root/etc/config/luci --- BB 版本中feeds中，bb版本open修改了luci配置文件路径，并且pakages/feeds路径中也没有luci配置文件了.不知道这个路径是不是正确的.再者就是修改 xxx/dl/ 下的源码压缩包，或者 xxx/build_dir/$target/下源码
+注意：如果在xxx/feeds 修改可能需要执行 ./scripts/feeds install luci 更新
+主题Logo替换
+源码路径：xxx/feeds/luci/luci/luci/themes/bootstrap/htdocs/luci-static/bootstrap/logo.jpg
+路由路径：/www/luci-static/bootstrap/logo.jpg
+Tips：
+由于版本的更新，文件路径可能变更，此处列出的为BB版本的例子.如果找不到可以用命令手动在/feeds/中查找：find ./ -name logo.jpg.此处为bootstrap主题Logo，其他主题的Logo修改类似.
+页面脚标信息
+源码路径：xxx/feeds/luci/luci/luci/themes/bootstrap/luasrc/view/themes/bootstrap/footer.htm
+路由路径：/usr/lib/lua/luci/view/themes/bootstrap/footer.htm
+修改位置：
+Powered by <%= luci.__appname__ .. " (" .. luci.__version__ .. ")" %> <%=luci.version.distversion%>s
+
+
+Status状态栏信息
+源码路径：xxx/feeds/luci/modules/admin-full/luasrc/view/admin_status/index.htm
+路由路径：/usr/lib/lua/luci/view/admin_status/index.html
+修改位置：找到类似的代码段修改.
+
+
+<%:System%>
+
+<%:Hostname%><%=luci.sys.hostname() or "?"%>
+<%:Model%><%=pcdata(model or "?")%>
+<%:Firmware Version%>
+<%=pcdata(luci.version.distname)%> <%=pcdata(luci.version.distversion)%> /
+<%=pcdata(luci.version.luciname)%> (<%=pcdata(luci.version.luciversion)%>)
+
+<%:Kernel Version%><%=luci.sys.exec("uname -r")%>
+<%:Local Time%>-
+<%:Uptime%>-
+<%:Load Average%>-
+
+*LUCI用到的一些方法记录: http://blog.csdn.net/u013131156/article/details/45824203 ,https://segmentfault.com/a/1190000013188514, https://segmentfault.com/a/1190000013074761
+*api例子: http://www.voidcn.com/article/p-uelrxrtw-ru.html, http://www.openwrt.pro/post-320.html, http://www.cnblogs.com/rohens-hbg/articles/5124117.html
+*例子: https://segmentfault.com/a/1190000002394668, http://blog.csdn.net/ubuntucc/article/details/41083687, http://www.znck007.com/forum.php?mod=viewthread&tid=39173, http://xpower2888.pixnet.net/blog/post/221928085#para1, http://coopermaa2nd.blogspot.tw/2013/08/luci.html ,https://github.com/openwrt/luci/wiki, http://blog.csdn.net/junglefly/article/details/52415978
+luci多國語言: http://blog.csdn.net/x13163303344/article/details/70102279
+luci多使用者 http://blog.csdn.net/xiaomingtongxie/article/details/71307504
+*OpenWrt系统安全改进<五> --- Web 访问权限分级: http://blog.csdn.net/teddy99999/article/details/43266375
+*openwrt中uhttpd替换成lighttpd: http://blog.csdn.net/yulinshuifeng/article/details/51002786
+*使用openwrt配置https访问:http://blog.csdn.net/boliang319/article/details/41439663
+增加一个菜单：http://www.right.com.cn/forum/thread-131035-1-1.html
+*给openwrt添加LED驱动: http://www.openwrt.pro/post-227.html
+ 
+※ http://chaochaoblog.com/archives/359, http://xpower2888.pixnet.net/blog/post/221928085-%E9%96%8B%E7%99%BCopenwrt%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8Aluci%E7%9A%84%E6%A8%A1%E5%A1%8A 
+LuCI是OpenWrt上的Web管理界面，LuCI采用了MVC三層架構(/usr/lib/lua/luci/下有三个目录model、view、controller)，同時其使用Lua腳本開發，所以開發LuCI的配置界面不需要編輯任何的Html代碼，除非想自己單獨去創建網頁（View層），否則我們基本上只需要修改Model層就可以了
+官方也有一個如何去創建模塊的說明文檔，雖然寫的比較晦澀：http://luci.subsignal.org/trac/wiki/Documentation/ModulesHowTo
+要為LuCI增加一個新模塊，首先需要創建兩個文件，一個位于Controller（/usr/lib/lua/luci/controller/）下，定義模塊的入口；另一個位于Model（/usr/lib/lua/luci/model/cbi/）下，為配置模塊實際的代碼。
+一、首先我們定義模塊的入口，在/usr/lib/lua/luci/controller/下創建一個lua文件，類似如下：創建/usr/lib/lua/luci/controller/njitclient.lua文件
+https://htmlpreview.github.io/?https://github.com/openwrt/luci/blob/master/documentation/api/index.html
+(1)
+entry表示添加一个新的模块入口，官方给出了entry的定义，其中后两项都是可以为空的：
+entry(path, target, title=nil, order=nil)
+path：如果这样写{“click”, “here”, “now”}，那么就可以在浏览器里访问“http://192.168.x.1/cgi-bin/luci/click/here/now”来访问这个脚本。我们也可以根据需要按如下方式编写{“admin”, “一级菜单名”, “菜单项名”}，系统会自动在对应的菜单中生成菜单项。比如想在“网络”菜单下创建一个菜单项，那么一级菜单名可以写为“network”。
+target：
+调用目标分为三种，分别是执行指定方法Action、访问指定页面Views以及调用CBI Module
+    第一种可以直接调用指定的函数，比如点击菜单项就直接重启路由器等等，比如写为call(“function_name”)，然后在lua文件下编写名为function_name的函数就可以调用了。
+    第二种可以访问指定的页面，比如写为template(“myapp/mymodule”)就可以调用/usr/lib/lua/luci/view/myapp/mymodule.htm文件了
+    而如果要编写配置页面，那么使用第三种方法无非是最方便的，比如写为cbi(“myapp/mymodule”)就可以调用/usr/lib/lua/luci/model/cbi/myapp/mymodule.lua文件了。
+(动态生成界面的方法有两种，一是通过cbi()/form()方法，它们利用model中定义的模板map，生成html文件；另一种是通过template()方法，利用view中定义的htm（一种类似html的文件），直接生成界面。)
+
+module("luci.controller.njitclient", package.seeall)
+function index()
+        entry({"admin", "network", "njitclient"}, cbi("njitclient"), _("NJIT Client"), 100)
+        end
+(2)
+module("luci.controller.myapp.mymodule", package.seeall)
+function index()
+    entry({"click", "here", "now"}, call("action_tryme"), "Click here", 10).dependent=false
+end
+ 
+function action_tryme()
+    luci.http.prepare_content("text/plain")
+    luci.http.write("Haha, rebooting now...")
+    luci.sys.reboot()
+end
+
+
+module("luci.controller.控制器名/路径", package.seeall)
+function index()
+        entry(路徑, 調用目標, _("顯示名稱"), 顯示順序)
+        end
+entry(path, target, title=nil, order=nil)
+第一項是訪問的路徑，不過路徑是按字符串數組給定的，比如路徑按如下方式寫“{"click", "here", "now"}”，那么就可以在瀏覽器里訪問“http://192.168.1.1/cgi-bin/luci/click/here/now”來訪問這個腳本。而通常我們希望為管理員菜單添加腳本，那么我們需要按如下方式編寫“{"admin", "一級菜單名", "菜單項名"}”，系統會自動在對應的菜單中生成菜單項。比如想在“網絡”菜單下創建一個菜單項，那么一級菜單名可以寫為“network”。
+第二項為調用目標，調用目標分為三種，分別是執行指定方法（Action）、訪問指定頁面（Views）以及調用CBI Module。
+    第一種可以直接調用指定的函數，比如點擊菜單項就直接重啟路由器等等，比如寫為“call("function_name")”，然后在lua文件下編寫名為function_name的函數就可以調用了。
+    第二種可以訪問指定的頁面，比如寫為“template("myapp/mymodule")”就可以調用/usr/lib/lua/luci/view/myapp/mymodule.htm文件了。
+    而如果要編寫配置頁面，那么使用第三種方法無非是最方便的，比如寫為“cbi("myapp/mymodule")”就可以調用/usr/lib/lua/luci/model/cbi/myapp/mymodule.lua文件了。
+
+二、用Lua和UCI接口開發LuCI配置模塊(Writing LuCI CBI models)
+接下來我們就要根據上邊寫的路徑來創建/usr/lib/lua/luci/model/cbi/njitclient.lua文件
+m = Map("配置文件文件名", "配置頁面標題", "配置頁面說明") http://luci.subsignal.org/trac/wiki/Documentation/CBI, http://luci.subsignal.org/trac/wiki/Documentation/ModulesHowTo 
+第一個參數即為配置文件存儲的文件名，不包含路徑，比如按上述創建的話，應該寫為“njitclient”，而第二與第三個參數則是用在來頁面上顯示的
+【三、在Bash文件中調用UCI接口】
+上邊我們已經完成了LuCI配置界面的開發，在配置界面中我們已經能讀取并保存配置文件了。接下來我們要編寫/etc/init.d/njitclient腳本，使程序最終能運行起來。關于UCI接口在腳本文件中的官方說明可以參考：http://wiki.openwrt.org/doc/devel/config-scripting
+【四、編譯開發的程序】
+如果按上述內容創建好上述4個文件，那么配置頁面和程序就能在OpenWrt上運行起來了。但是如果要想把自己寫的程序打包，還需要創建OpenWrt的Makefile來使用OpenWrt的SDK進行編譯。
+關于LuCI上配置Makefile的官方說明可以見這個地址：http://luci.subsignal.org/trac/wiki/Documentation/Modules
+※ https://www.52pojie.cn/thread-475019-1-1.html, https://read01.com/zh-tw/KB2KyL.html, http://coopermaa2nd.blogspot.tw/2013/08/luci-serial-port-baud-rate.html
+https://www.logcg.com/archives/608.html
+

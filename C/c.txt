@@ -95,6 +95,11 @@ http://sp1.wikidot.com/arm
 http://web2.fg.tp.edu.tw/~cc/blog/wp-content/uploads/2010/06/20100715advanceC.pdf
 http://huenlil.pixnet.net/blog/post/26078382-%5B%E8%BD%89%5Dgnu-c-__attribute__-%E6%A9%9F%E5%88%B6%E7%B0%A1%E4%BB%8B
 
+
+使用 gcc 自製 C/C++ 靜態、共享與動態載入函式庫教學
+如何產生 share library 呢? (在 Windows 稱為 DLL)https://blog.gtwang.org/programming/howto-create-library-using-gcc/, http://mqjing.blogspot.com/2009/04/c-gcc-library.html, http://andychen15577.blogspot.com/2016/07/linux.html
+如何製作及使用一個dll http://alonsohsu.pixnet.net/blog/post/9354229-%E5%A6%82%E4%BD%95%E8%A3%BD%E4%BD%9C%E5%8F%8A%E4%BD%BF%E7%94%A8%E4%B8%80%E5%80%8Bdll 
+
 lib:
 https://www.tutorialspoint.com/c_standard_library/stdio_h.htm
 http://tw.gitbook.net/c_standard_library/c_function_memcpy.html
@@ -163,6 +168,7 @@ http://www.programmer-club.com.tw/ShowSameTitleN/c/38896.html
 *(search keyword:function() const c++)unsigned long BytesUsed (NonVolSection Section) const; inline void GetPreviousVersion (NonVolSection section, int &major, int &minor) const; http://blog.xuite.net/tsai.oktomy/program/65131235-const+%E6%94%BE%E7%BD%AE%E4%BD%8D%E7%BD%AE%E7%9A%84%E6%84%8F%E7%BE%A9
 *http://pydoing.blogspot.tw/2013/02/cpp-destructor.html
 *class的function的代數
+*行內函式(inline function):內嵌函數，也就是在 function前加入inline這個關鍵字，其用意是加速程式的執行速度。經過inline所宣告的function會直接展開在程式碼裡面，展開後的程式碼就會直接存取該參數，省略了呼叫function的資源浪費。也就是好處是不用呼叫函式執行速度較快,缺點是程式會因此變大,通常會用在程式碼不多但是卻常被呼叫的函式，然後只有當編譯器的效益分析為有利的時候，inline的動作才會發生 https://dotblogs.com.tw/ace_dream/tags/1?qq=%E5%BE%AE%E7%9F%A5%E8%AD%98
 *======================================================================*
 *break & continue: http://www.cchsu.com/arthur/prg_bg5/c/4.8.htm
 在迴圈之中我們有時需要中斷或跳過迴圈程式的執行，這個時候就可以
@@ -252,7 +258,7 @@ void main (void)
     }
 }
 
-
+Lvalues 和 Rvalues: 每個C++運算式當中都會有所謂的左值(Lvalues)跟右值(Rvalues)，左值通常指的是運算式後還保留其狀態的一個物件，通常指的是所有的變數都是左值。右值通常指的是一個運算式過後其狀態就不會被保留了，也就是一個暫時存在的數值。 https://dotblogs.com.tw/ace_dream/2016/01/14/lvaluervalue
 *C語言裡並沒有boolean資料型態(只有true和false兩種值),條件是否成立完全是看運算式的結果,若為0表示不成立,不為0表示成立。這一點設計得不好,很容易讓人犯錯,誤把邏輯運算寫成數值運算而不自覺。像java語言就提供了boolean資料型態,且邏輯運算和數值運算不能混用,以免程式撰寫者犯錯。
 位元處理:
 AND 兩者為真才為真,其餘皆為假
@@ -284,6 +290,9 @@ https://blog.jason.party/19/byte-order
 aton與pton
 http://twmht.github.io/blog/posts/cc/atoi_itoa.html  atoi與itoa實作
 https://dotblogs.com.tw/yc421206/archive/2013/04/09/101154.aspx
+
+#define 會建立"巨集"(Macro)，定義巨集之後，編譯器就可以使用語彙字元字串用來替代原始程式檔中出現的每個識別項，macro是在前置處理器(preprocessor)處理的。
+函式(Function)是執行某項程式碼區塊。函式可以自己定義參數來讓呼叫端將引數傳遞給函式。函式也可以選擇性的傳回值來當作其輸出，function是在編譯器(compiler)處理的。 https://dotblogs.com.tw/ace_dream/2016/01/16/function_macro
 
 #include的使用
 http://140.129.118.16/~richwang/99-2-Courses/About_C_Header.pdf
@@ -325,6 +334,8 @@ http://adison.logdown.com/notes/235679/difference-between-ifdef-and-if-defined
 http://huenlil.pixnet.net/blog/post/24339151-%5B%E8%BD%89%5D%23ifndef%2C-%23define%2C-%23endif%E7%9A%84%E7%94%A8%E6%B3%95%28%E6%95%B4%E7%90%86%29-
 #if #ifdef和#ifndef的用法和區別
 http://www.111cn.net/net/c/42613.htm
+
+External:當程式由數個檔案組成的時候，假設B檔案要存取A檔案宣告的全域變數或是函式時，那麼B檔案要做使用外部的宣告，也就是以關鍵字 extern 修飾。https://dotblogs.com.tw/ace_dream/2016/06/10/extern
 
 http://imil.au.edu.tw/~hsichcl/TurboC/C_Unit10.htm 資料結構
 ※http://imil.au.edu.tw/~hsichcl/DataStructureHandout.htm
@@ -528,7 +539,9 @@ int strncasecmp(const char *s1, const char *s2, size_t n);
 函數說明：strncasecmp()用來比較參數s1 和s2 字串前n個字元，比較時會自動忽略大小寫的差異。
 返回值：若參數s1 和s2 字串相同則返回0。s1 若大於s2 則返回大於0 的值，s1 若小於s2 則返回小於0 的值
 
-*字串切割: http://pl-learning-blog.logdown.com/posts/1084611, strtok():
+*字串切割:
+https://dotblogs.com.tw/ace_dream/2016/01/08/strtok_strlen
+ http://pl-learning-blog.logdown.com/posts/1084611, strtok():
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
